@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+           function f1 (name,age) {
+               this.name = name;
+               this.age = age;
+           }
+           var yx = f1.prototype;
+           yx.taiji = function () {
+               alert('我会打太极吼吼哈勒');
+           }
+           yx.wo = function () {
+               alert('别打了！别打了！不要打了，呜呜呜~~')
+           }
+       var a = new f1('张三', 14);
+       var a2 = new f1('李四', 15);
+    </script>
+</body>
+</html>
