@@ -1,0 +1,56 @@
+/*清除默认样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+input {
+	/*清除默认边框*/
+	border: 0;
+	/*清除默认轮廓线*/
+	outline: 0;
+}
+/*常用的样式*/
+body {
+	background-color: #000;
+	font: 14px arial, 'microsoft yahei';
+	color: #8f897f;
+}
+a {
+	color: #666;
+}
+a:hover {
+	color: #00b4ff;
+}
+/*版心*/
+.w {
+	width: 1330px;
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+/*双伪元素清除浮动*/
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+

@@ -1,0 +1,129 @@
+header .header-top {
+  height: 80px;
+  background-color: #141414;
+}
+header .header-top .logo {
+  margin: 0 90px 0 14px;
+  float: left;
+  width: 205px;
+  height: 60px;
+  padding-top: 10px;
+}
+header .header-top .zhong {
+  height: 40px;
+  padding-top: 20px;
+  float: left;
+}
+header .header-top .zhong a {
+  float: left;
+  margin-right: 40px;
+  text-align: center;
+}
+header .header-top .zhong a:nth-child(3) {
+  color: #c39b5e;
+}
+header .header-top .zhong h5 {
+  height: 25px;
+  font-size: 16px ;
+}
+header .header-top .zhong span {
+  line-height: 15px;
+  font-size: 12px;
+}
+header .header-top .right .zuo {
+  float: left;
+  padding-top: 15px;
+  margin-right: 8px;
+}
+header .header-top .right .zuo img {
+  border: 1px solid orange;
+  border-radius: 50%;
+}
+header .header-top .right .denglu {
+  padding-top: 15px;
+  height: 50px;
+}
+header .header-top .right .denglu a {
+  display: block;
+}
+header .header-top .right .denglu a:nth-child(1) {
+  color: #fff;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+header .header-top .right .denglu a:nth-child(2) {
+  font-size: 12px;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  background: url(../img/e7931136e2dc85eca00e94e176e6ddaf.jpg) no-repeat;
+  background-size: 100%;
+}
+.banner .bannerTop {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.banner .bannerTop .zuo {
+  width: 148px;
+  border-right: 1px solid #535563;
+  position: absolute;
+  top: 13px;
+  left: 45px;
+}
+.banner .bannerTop .zuo span {
+  color: #c39b5e;
+  font-size: 14px;
+  height: 22px;
+}
+.banner .bannerTop .zuo p {
+  font-size: 18px;
+  color: #f2d2a2;
+}
+.banner .pifu {
+  position: absolute;
+  left: 560px;
+  height: 70px;
+  line-height: 70px;
+  width: 195px;
+}
+.banner .pifu a:nth-child(1) {
+  color: #c39b5e;
+  padding-right: 75px;
+}
+.banner .pifu a:nth-child(2) {
+  color: #9c968e;
+}
+.banner .logo1 {
+  position: absolute;
+  left: 75px;
+  top: 160px;
+}
+.banner .jingling {
+  position: absolute;
+  top: 325px;
+  left: 85px;
+  width: 1200px;
+  height: 145px;
+  background: url(../img/jingling.png) no-repeat 0px 0px;
+}
+.banner .jingling img {
+  position: absolute;
+  top: 7px;
+  left: 536px;
+  width: 129px;
+  height: 129px;
+  border-radius: 50%;
+}
+.banner .name {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  font-size: 60px;
+  color: #c39b5e;
+}
