@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  letter-spacing: normal;
+}
+.box1 {
+  width: 100%;
+}
+.box1 img {
+  width: 100%;
+}
+.box2 {
+  width: 100%;
+  position: relative;
+}
+.box2 img {
+  width: 100%;
+}
+.box2 .con_nav1 {
+  position: absolute;
+  top: -50px;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+}
+.box2 .con_nav1 ul {
+  height: 80px;
+  width: 800px;
+  position: absolute;
+  top: 54px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.box2 .con_nav1 ul li {
+  margin-left: 30px;
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+}
+.box2 .con_nav1 ul li:nth-child(n+2) {
+  margin-left: 54px;
+}
+.box2 .list1 {
+  width: 1114px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 793px;
+  position: absolute;
+  top: 47px;
+}
+.box2 .list1 li {
+  position: relative;
+  width: 276px;
+  height: 100%;
+  float: left;
+}
+.box2 .list1 li .gs1 {
+  background-image: url(../images/gs_list1.jpg);
+  background-size: cover;
+  display: inline-block;
+  height: 556px;
+  width: 276px;
+}
+.box2 .list1 li .gs2 {
+  background-image: url(../images/gs_list2.jpg);
+  background-size: cover;
+  display: inline-block;
+  height: 556px;
+  width: 276px;
+}
+.box2 .list1 li .gs3 {
+  background-image: url(../images/gs_list3.jpg);
+  background-size: cover;
+  display: inline-block;
+  height: 556px;
+  width: 276px;
+}
+.box2 .list1 li .gs4 {
+  background-image: url(../images/gs_list4.jpg);
+  background-size: cover;
+  display: inline-block;
+  height: 556px;
+  width: 276px;
+}
+.box3 {
+  width: 100%;
+}
+.box3 img {
+  width: 100%;
+}
+.box4 {
+  width: 100%;
+}
+.box4 img {
+  width: 100%;
+}
+.box5 {
+  width: 100%;
+}
+.box5 img {
+  width: 100%;
+}
+.box6 {
+  width: 100%;
+}
+.box6 img {
+  width: 100%;
+}
