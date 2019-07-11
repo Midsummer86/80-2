@@ -1,0 +1,149 @@
+.top {
+  height: 38px;
+  margin-bottom: 5px;
+  background-color: #fff;
+}
+.top .w {
+  line-height: 38px;
+}
+.top .w div {
+  margin-left: 112px;
+  font-size: 14px;
+  position: relative;
+}
+.top .w div .logo {
+  margin-right: 10px;
+}
+.top .w div .shu {
+  color: #d2d7e3;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.top .w div img {
+  vertical-align: middle;
+}
+.top .w div .fr {
+  margin-right: 50px;
+}
+.top .w div .fr .tx {
+  margin-left: 28px;
+}
+.top .w div .song {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.banner {
+  height: 620px;
+  width: 100%;
+  position: relative;
+  background: url(../imgs/17387102732315.jpg) center top;
+}
+.banner .nav {
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.banner .nav img {
+  margin-top: 15px;
+}
+.banner .nav a {
+  display: inline-block;
+  height: 77px;
+  padding: 0 10px;
+  margin-left: 25px;
+  text-align: center;
+  color: #c9c9dd;
+}
+.banner .nav a h3 {
+  font-weight: 400;
+  line-height: 50px;
+  font-size: 18px;
+}
+.banner .nav a p {
+  font-size: 12px;
+}
+.banner .free .w {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.banner .free .left {
+  width: 730px;
+  height: 115px;
+  padding: 0 20px;
+  background-color: #13395e;
+  bottom: 0;
+  left: 0;
+}
+.banner .free .left h5 {
+  color: #a6afbc;
+  font-size: 14px;
+  margin: 10px 0;
+}
+.banner .free .left .zm img {
+  height: 68px;
+  width: 68px;
+}
+.banner .free .left .zm span img {
+  height: 70px;
+  width: 220px;
+  display: none;
+}
+.banner .free .left .zm .fr {
+  width: 16px;
+  font-size: 14px;
+  color: #626a7a;
+}
+.banner .free .right {
+  height: 115px;
+  width: 426px;
+  background-color: #124e7a;
+  bottom: 0;
+  right: 0;
+  position: relative;
+  color: #b3bbc5;
+  text-align: center;
+  line-height: 115px;
+}
+.banner .free .right img {
+  position: absolute;
+  left: 10px;
+  top: -5px;
+}
+.banner .free .right a {
+  color: #8ea0b0;
+}
+.content .first {
+  margin: 40px 0;
+}
+.content .first img {
+  vertical-align: middle;
+}
+.content .first a {
+  color: #363636;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+.content .first span {
+  margin-left: 10px;
+}
+.content .second img {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.content .fenge a {
+  display: inline-block;
+  width: 395px;
+  text-align: center;
+  color: #4b4b4b;
+  border-bottom: 3px solid #d4d4d4;
+  margin-top: 26px;
+  padding-bottom: 5px;
+}
+.content .fenge a:nth-child(1) {
+  color: #3589dd;
+  border-bottom: 3px solid #3589dd;
+}

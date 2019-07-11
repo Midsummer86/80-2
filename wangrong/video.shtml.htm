@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!-- 页面废弃，进入直接跳转到/v/ -->
+	<meta http-equiv="refresh" content="0; url=javascript:if(confirm(%27https://pvp.qq.com/v/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/v/%27" tppabs="https://pvp.qq.com/v/" />
+	<meta charset="gbk">
+	<meta name="author" content="Tencent-TGideas">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="Copyright" content="Copyright (c) 2006-2015 TENCENT">
+	<meta name="keywords" content="王者荣耀视频、王者荣耀比赛视频、王者荣耀英雄视频、王者荣耀攻略视频、王者荣耀李白视频、李白视频、王者荣耀关羽视频、关羽视频">
+	<meta name="description" content="王者荣耀官网，官方英雄视频站，最全最新最海量解说视频，赛事视频，搞笑视频在线观看及下载，助您荣登最强王者宝座!">
+	<title>王者荣耀视频站-王者荣耀官网网站</title>
+	<!-- 设计：xxx | 重构：xxx | 创建时间:2016-05-11| 团队博客：//tgideas.qq.com -->
+	<link rel="stylesheet" type="text/css" href="common.css" tppabs="https://pvp.qq.com/web201605/css/common.css">
+	<link rel="stylesheet" type="text/css" href="vcss.css" tppabs="https://pvp.qq.com/web201605/css/vcss.css">
+    <style type="text/css">
+    .choseKeywords{
+	  height: 120px;
+	  line-height: 20px;
+	  overflow-y: scroll;
+	}
+    </style>
+	</head>
+	<body>
+		 <div class="Win_Submission_Body">
+		  		<div class="Win_Submission">
+		  			<i class="w_lbg"></i>
+		  			<i class="w_rbg"></i>
+		  			<i class="w_bbg"></i>
+		  			<div class="Win_Submission_close"><span>X</span></div>
+		  			<div class="Win_content">
+		  				<div class="Submission_title">
+		  					<p class="w_video_t">视频投稿</p>
+		  					<p class="w_word_t">图文投稿
+		  						<span class="w_word_tsm">
+		  							<span class="q_icon">
+		  								<img width="16" height="16" src="qicon.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/qicon.png">
+		  							</span>
+		  							<a target="_blank" href="javascript:if(confirm(%27https://pvp.qq.com/webplat/info/news_version3/15592/24091/25112/m15762/201601/421172.shtml  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/webplat/info/news_version3/15592/24091/25112/m15762/201601/421172.shtml%27" tppabs="https://pvp.qq.com/webplat/info/news_version3/15592/24091/25112/m15762/201601/421172.shtml">Q&A:如何上传图文？</a>
+		  						</span>
+		  					</p>
+		  				</div>
+		  				<li class="Submission_type">
+			  				<span class="upload_title">内容类型：</span>
+			  						<div class="upload_type">
+			  							<i class="up_radio"  id="type_word"><span data-id="1" ></span></i>图文投稿
+			  							<i class="up_radio ml90" id="type_vedio"><span data-id="2"></span></i>视频投稿
+			  						</div>
+			  			</li>
+		  				<div id="w_word_from" class="w_word_from">
+			  				<ul class="upload_form">
+			  					<li>
+			  						<span class="upload_title">资讯标题：</span>
+			  						<input type="text" placeholder="输入资讯标题" class="word_title" id="jNewsTitle" />
+			  					</li>
+			  					<li>
+			  						<span class="upload_title">资讯摘要：</span>
+			  						<textarea class="word_title" id="jNewsDesc"></textarea>	
+			  					</li>
+                                <li>
+			  						<span class="upload_title">关键词：</span>
+			  						<div id="jCheckNewsWords"></div>
+			  					</li>
+                                <li>
+			  						<span class="upload_title">可选关键词：</span>
+                                    <input id="jNewsKeywordValue" type="hidden" value="" />
+			  						<div id="jNewsWords" class="choseKeywords"></div>
+			  					</li>
+			  					<li class="word_img">
+			  						<span class="upload_title">资讯截图：</span>
+			  						<input type="file" class="upload_img" id="NewscoverImg"  name="file_upload"  />
+			  						<a href="javascript:;" class="upload_imgbtn" onclick="UploadNewsImg(this);return false" id="file_upload_1" >上传图片</a>
+			  						<span class="upload_img_tips">图片尺寸190*105 (小于40K)</span>
+			  						<div id="localImag">
+                                       <img id="image_News_upload_NewscoverImg" src="upload_img.png" tppabs="https://game.gtimg.cn/images/yxzj/v/upload_img.png" width="190" height="106" style="display: block; width: 190px; height: 106px;">
+                                       <input id="image_News_value_NewscoverImg" type="hidden" value="" />
+                                     </div>
+			  					</li>
+			  					<li class="word_conent">
+			  						<span class="upload_title">资讯内容：</span>
+			  						  <div class="word_editor"> <!--编辑器位置-->
+			  						  	 <textarea id="jNewsContent" name="content"></textarea>
+			  						  </div>
+			  					</li>
+			  				</ul>
+                            <input id="iNewsId" type="hidden" value="0">
+                            
+			  				<div class="submitBtn" id="word_submit"><a href="javascript:;" onclick="SubmitNewsForm();">确定提交</a></div>
+		  				</div>
+		  				<div id="w_video_from" class="w_video_from">
+			  				<ul class="upload_form">
+			  					<li class="video_vid">
+			  						<span class="upload_title">视频VID：</span>
+			  						<input type="text" placeholder="输入视频VID" class="video_title" id="jVID" />
+			  						 <a  class="take_vidbtn" href="javascript:SearchVedioInfo();" id="vidContent" >拉取信息</a>
+			  						<span class="w_video_tsm">
+                                       <span class="q_icon">
+		  								<img width="16" height="16" src="qicon.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/qicon.png">
+		  							</span>
+		  							<a target="_blank" href="javascript:if(confirm(%27https://pvp.qq.com/webplat/info/news_version3/15592/24091/25112/m15762/201601/421172.shtml  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/webplat/info/news_version3/15592/24091/25112/m15762/201601/421172.shtml%27" tppabs="https://pvp.qq.com/webplat/info/news_version3/15592/24091/25112/m15762/201601/421172.shtml">Q&A:如何上传图文？</a></span>
+			  					</li>
+                                <li>
+			  						<span class="upload_title">视频名称：</span>
+			  						<input type="text" id="jTitle" type="text" placeholder="输入视频名称"   class="video_title" />
+			  					</li>
+			  					<li>
+			  						<span class="upload_title">视频描述：</span>
+                                    <input id="jDesc" type="text" placeholder="输入视频描述" class="video_title">
+			  					</li>
+                                <li>
+			  						<span class="upload_title">关键字：</span>
+			  						<div  id="jCheckWords"></div>	
+			  					</li>
+                                <li>
+			  						<span class="upload_title">可选关键字：</span>
+                                    <input id="jKeywordValue" type="hidden" value="" />
+			  						<div  id="jWords" class="choseKeywords"></div>	
+			  					</li>
+			  					<li class="video_img">
+			  						<span class="upload_title">视频封面：</span>
+			  						<input type="file" class="upload_img" id="coverImg" name="file_upload" />
+			  						<a href="javascript:;" class="upload_imgbtn" onclick="UploadVideoImg(this);return false">上传图片</a>
+			  						<span class="upload_img_tips">图片尺寸190*105 (小于40K)</span>
+			  						<div id="localImag">
+                                    <img id="image_upload_coverImg"  src="upload_img.png" tppabs="https://game.gtimg.cn/images/yxzj/v/upload_img.png" width="190" height="106" style="display: block; width: 190px; height: 106px;"></div>
+                                    <input id="image_value_coverImg" type="hidden" value="" />
+                                    <input id="jTime" type="hidden">
+                                    <input id="jURL" type="hidden" size="53">
+                                    <input id="authorname" type="hidden">
+                                    <input id="jType" type="hidden" value="0">
+                                    <input id="jSubType" type="hidden" value="0"> 
+                                    <input id="iVideoId" type="hidden" value="0">
+                                    <input id="iTotalPlay" name="type" type="hidden" value="" />			
+                                    <input id="mp4" name="type" type="hidden" value="" />
+                                    <input id="flash" name="type" type="hidden" value="" />
+                                    <input id="sVid" name="type" type="hidden" value="" />
+			  					</li>
+			  				</ul>
+                            <div class="submitBtn" id="video_submit" style="margin-top:200px;"><a href="javascript:;"   onclick="SubmitVideoForm();">提交</a></div>
+                            
+		  				</div>
+                        
+		  			</div>
+		     	</div>
+		  	</div>
+		  <div class="wrapper video_bg">
+		  	<?xml version="1.0" encoding="gb2312"?>
+  <div class="top-nav-bg"></div>
+  <!--<p class="idx-mask"></p>-->
+  <div class="header">
+	<div class="header-inner pr bc">      
+	  <!--=========主导航==========-->           
+	  <ul class="main-nav clearfix">       
+		<li class="first-nav">
+		  <a href="javascript:if(confirm(%27https://pvp.qq.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/%27" tppabs="https://pvp.qq.com/" target="_blank" title="官网首页" onclick="pgvSendClick({hottag:'https://pvp.qq.com/web201605/main.mainNav.nav1'});">
+			官网首页
+			<em>HOME</em>
+		  </a>
+		</li>
+		<li>
+		  <a href="item.shtml.htm" tppabs="https://pvp.qq.com/web201605/item.shtml" target="_blank" title="游戏资料" onclick="pgvSendClick({hottag:'https://pvp.qq.com/web201605/main.mainNav.nav2'});">
+			游戏资料
+			<em>DATA</em>
+		  </a>
+		</li>
+		<li>
+		  <a href="javascript:if(confirm(%27https://pvp.qq.com/raiders/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/raiders/%27" tppabs="https://pvp.qq.com/raiders/" target="_blank" title="攻略中心" onclick="pgvSendClick({hottag:'https://pvp.qq.com/web201605/main.mainNav.nav3'});">
+			攻略中心
+			<em>RAIDERS</em>
+		  </a>
+		</li> 
+		<li>
+		  <a href="javascript:if(confirm(%27https://pvp.qq.com/match/kcc.shtml?ADTAG=pvp.hi  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/match/kcc.shtml?ADTAG=pvp.hi%27" tppabs="https://pvp.qq.com/match/kcc.shtml?ADTAG=pvp.hi" target="_blank" title="赛事中心" onclick="pgvSendClick({hottag:'https://pvp.qq.com/web201605/main.mainNav.nav4'});">
+			赛事中心
+			<em>MATCH</em>
+		  </a>
+		</li>
+		<li>
+		  <a href="javascript:if(confirm(%27https://pvp.qq.com/cp/a20170707zhhz  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/cp/a20170707zhhz%27" tppabs="https://pvp.qq.com/cp/a20170707zhhz" target="_blank" title="王者生活" onclick="pgvSendClick({hottag:'https://pvp.qq.com/web201605/main.mainNav.nav7'});">
+			王者生活
+			<em>LIFE</em>
+		  </a>
+		</li>
+		<li>
+		  <a href="javascript:if(confirm(%27https://bbs.g.qq.com/forum.php?mod=forumdisplay&fid=56891&ADTAG=game.web.yxzj  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bbs.g.qq.com/forum.php?mod=forumdisplay&fid=56891&ADTAG=game.web.yxzj%27" tppabs="https://bbs.g.qq.com/forum.php?mod=forumdisplay&fid=56891&ADTAG=game.web.yxzj" target="_blank" title="社区互动" onclick="pgvSendClick({hottag:'https://pvp.qq.com/web201605/main.mainNav.nav5'});">
+			社区互动
+			<em>COMMUNITY</em>
+		  </a>
+		</li>
+		<li>
+		  <a href="javascript:void(0)" target="_blank" title="玩家支持" onclick="pgvSendClick({hottag:'https://pvp.qq.com/web201605/main.mainNav.nav6'});">
+			玩家支持
+			<em>PLAYER</em>
+		  </a>
+		</li>       
+	  </ul> 
+	  <div id="J_subNav" class="sub-nav">
+	  <ul class="sub-nav-inner">
+		  <li class="down-nav">
+			 &nbsp;
+		  </li>
+		  <li class="down-nav">
+			 <a href="javascript:if(confirm(%27https://pvp.qq.com/cp/a20170621version/index.htm?ADTAG=pvp.index.nav  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/cp/a20170621version/index.htm?ADTAG=pvp.index.nav%27" tppabs="https://pvp.qq.com/cp/a20170621version/index.htm?ADTAG=pvp.index.nav" target="_blank" title="版本介绍" onclick="pgvSendClick({hottag:'main.mainNav.nav20'});">版本介绍</a>
+			 <a href="introduce.shtml.htm" tppabs="https://pvp.qq.com/web201605/introduce.shtml" target="_blank" title="游戏介绍" onclick="pgvSendClick({hottag:'main.mainNav.nav21'});">游戏介绍</a>
+			 <a href="herolist.shtml.htm" tppabs="https://pvp.qq.com/web201605/herolist.shtml" target="_blank" title="英雄资料" onclick="pgvSendClick({hottag:'main.mainNav.nav22'});">英雄资料</a>
+			 <a href="javascript:if(confirm(%27https://pvp.qq.com/coming/  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/coming/%27" tppabs="https://pvp.qq.com/coming/" target="_blank" title="爆料站" onclick="pgvSendClick({hottag:'main.mainNav.nav27'});">爆料站</a>
+			 <a href="javascript:void(0)" target="_blank" title="故事站" onclick="TGDialogS('story');pgvSendClick({hottag:'main.mainNav.nav25'});">故事站</a>
+			 <a href="wallpaper.shtml.htm" tppabs="https://pvp.qq.com/web201605/wallpaper.shtml" target="_blank" title="游戏壁纸" onclick="pgvSendClick({hottag:'main.mainNav.nav26'});">游戏壁纸</a>
+		  </li>
+		  <li class="down-nav">
+		  	 <a href="javascript:if(confirm(%27https://pvp.qq.com/raiders/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/raiders/%27" tppabs="https://pvp.qq.com/raiders/" target="_blank" title="攻略中心" onclick="pgvSendClick({hottag:'main.mainNav.nav31'});">攻略中心</a>
+			 <a href="javascript:if(confirm(%27https://pvp.qq.com/strategy/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/strategy/%27" tppabs="https://pvp.qq.com/strategy/" target="_blank" title="英雄攻略" onclick="pgvSendClick({hottag:'main.mainNav.nav32'});">英雄攻略</a>
+			 <a href="javascript:if(confirm(%27https://pvp.qq.com/v/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/v/%27" tppabs="https://pvp.qq.com/v/" title="视频中心" onclick="pgvSendClick({hottag:'main.mainNav.nav33'});">视频中心</a>
+		  </li>
+		  <li class="down-nav">
+			 <a href="javascript:if(confirm(%27https://pvp.qq.com/match/kpl/  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/match/kpl/%27" tppabs="https://pvp.qq.com/match/kpl/" target="_blank" title="KPL职业联赛" onclick="pgvSendClick({hottag:'main.mainNav.nav41'});">KPL职业联赛</a>
+			 <a href="javascript:if(confirm(%27https://pvp.qq.com/match/kcc.shtml  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/match/kcc.shtml%27" tppabs="https://pvp.qq.com/match/kcc.shtml" target="_blank" title="KCC王者冠军杯" onclick="pgvSendClick({hottag:'main.mainNav.nav47'});">KCC王者冠军杯</a>
+			 <a href="javascript:if(confirm(%27https://pvp.qq.com/match/city.shtml  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/match/city.shtml%27" tppabs="https://pvp.qq.com/match/city.shtml" target="_blank" title="KOC王者城市赛" onclick="pgvSendClick({hottag:'main.mainNav.nav42'});">KOC王者城市赛</a>
+			 <a href="javascript:if(confirm(%27https://ui.ptlogin2.qq.com/cgi-bin/login?style=9&appid=809041606&daid=18&low_login=0&s_url=http%3A%2F%2Fyouxi.vip.qq.com%2Fm%2Fact%2F201603%2Fcfm_yxzj_qgc.html%3Fjsonid%3D90228%26game%3Dsgame%26onlyqq%3Dfalse%26_wv%3D1  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://ui.ptlogin2.qq.com/cgi-bin/login?style=9&appid=809041606&daid=18&low_login=0&s_url=http%3A%2F%2Fyouxi.vip.qq.com%2Fm%2Fact%2F201603%2Fcfm_yxzj_qgc.html%3Fjsonid%3D90228%26game%3Dsgame%26onlyqq%3Dfalse%26_wv%3D1%27" tppabs="https://ui.ptlogin2.qq.com/cgi-bin/login?style=9&appid=809041606&daid=18&low_login=0&s_url=http%3A%2F%2Fyouxi.vip.qq.com%2Fm%2Fact%2F201603%2Fcfm_yxzj_qgc.html%3Fjsonid%3D90228%26game%3Dsgame%26onlyqq%3Dfalse%26_wv%3D1" target="_blank" title="QGC夏季联赛" onclick="pgvSendClick({hottag:'main.mainNav.nav43'});">QGC夏季联赛</a>
+			 <a href="javascript:if(confirm(%27https://tga.qq.com/match/2016/shouyou/game.html?game=wzry&tga=1  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://tga.qq.com/match/2016/shouyou/game.html?game=wzry&tga=1%27" tppabs="https://tga.qq.com/match/2016/shouyou/game.html?game=wzry&tga=1" target="_blank" title="TGA大奖赛" onclick="pgvSendClick({hottag:'main.mainNav.nav44'});">TGA大奖赛</a>
+			 <a href="javascript:alert('敬请期待')" target="_blank" title="WGC精英赛" onclick="pgvSendClick({hottag:'main.mainNav.nav45'});">WGC精英赛</a>
+			 <a href="javascript:if(confirm(%27https://pvp.qq.com/match/college.shtml  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/match/college.shtml%27" tppabs="https://pvp.qq.com/match/college.shtml" target="_blank" title="王者高校赛" onclick="pgvSendClick({hottag:'main.mainNav.nav46'});">王者高校赛</a>
+		  </li>
+		  <li class="down-nav">
+		  	 <a href="javascript:if(confirm(%27https://pvp.qq.com/cp/a20170707zhhz  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/cp/a20170707zhhz%27" tppabs="https://pvp.qq.com/cp/a20170707zhhz" target="_blank" title="王者信用卡" onclick="pgvSendClick({hottag:'main.mainNav.nav51'});">王者信用卡</a>
+		  	 <a href="javascript:if(confirm(%27https://pvp.qq.com/history/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/history/%27" tppabs="https://pvp.qq.com/history/" target="_blank" title="王者文化站" onclick="pgvSendClick({hottag:'main.mainNav.nav52'});">王者文化站</a>
+		  </li>
+		  <li class="down-nav">
+			<a href="javascript:if(confirm(%27https://buluo.qq.com/p/barindex.html?bid=227061  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://buluo.qq.com/p/barindex.html?bid=227061%27" tppabs="https://buluo.qq.com/p/barindex.html?bid=227061" target="_blank" title="手Q部落" onclick="pgvSendClick({hottag:'main.mainNav.nav52'});">手Q部落</a>
+			<a href="javascript:void(0)" target="_blank" title="微信圈子" onclick="TGDialogS('weiquan');pgvSendClick({hottag:'main.mainNav.nav53'});">微信圈子</a>
+			<a href="javascript:if(confirm(%27https://weibo.com/heromoba  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://weibo.com/heromoba%27" tppabs="https://weibo.com/heromoba" title="官方微博" onclick="pgvSendClick({hottag:'main.mainNav.nav54'});">官方微博</a>
+			<a href="javascript:void(0)" title="微信公众号" onclick="TGDialogS('weixin');pgvSendClick({hottag:'main.mainNav.nav55'});">微信公众号</a>            
+			<a href="javascript:void(0)" title="手Q公众号" onclick="TGDialogS('qq');pgvSendClick({hottag:'main.mainNav.nav56'});">手Q公众号</a> 
+		  </li>
+		  <li class="down-nav">
+			 <a href="javascript:if(confirm(%27https://jiazhang.qq.com/jz/home.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://jiazhang.qq.com/jz/home.html%27" tppabs="https://jiazhang.qq.com/jz/home.html" target="_blank" title="成长守护平台" onclick="pgvSendClick({hottag:'main.mainNav.nav61'});"><i class="icon-guard"></i>成长守护平台</a>
+			 <a href="javascript:if(confirm(%27https://pvp.qq.com/cp/a20170726hsbbspc/index.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/cp/a20170726hsbbspc/index.html%27" tppabs="https://pvp.qq.com/cp/a20170726hsbbspc/index.html" target="_blank" title="健康系统" onclick="pgvSendClick({hottag:'main.mainNav.nav62'});"><i class="icon-health"></i>健康系统</a>
+			 <a href="javascript:void(0)" target="_blank" title="客服专区" onclick="TGDialogS('kefu');pgvSendClick({hottag:'main.mainNav.nav63'});">客服专区</a>
+			 <a href="javascript:if(confirm(%27https://pvp.qq.com/webplat/info/news_version3/15592/24091/24092/24095/m15241/201508/370256.shtml  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/webplat/info/news_version3/15592/24091/24092/24095/m15241/201508/370256.shtml%27" tppabs="https://pvp.qq.com/webplat/info/news_version3/15592/24091/24092/24095/m15241/201508/370256.shtml" title="礼包兑换" onclick="pgvSendClick({hottag:'main.mainNav.nav64'});" target="_blank">礼包兑换</a>
+			 <a href="javascript:if(confirm(%27https://tool.helper.qq.com/v3/wzry/official_website/index.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://tool.helper.qq.com/v3/wzry/official_website/index.html%27" tppabs="https://tool.helper.qq.com/v3/wzry/official_website/index.html" title="自助服务" onclick="pgvSendClick({hottag:'main.mainNav.nav65'});" target="_blank">自助服务</a>
+		  </li>
+	  </ul>
+	</div>   
+	</div>     
+	<!--=========周免英雄和用户登录==========-->
+	<div class="info-box clearfix">
+	  <h1><a href="javascript:if(confirm(%27https://pvp.qq.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/%27" tppabs="https://pvp.qq.com/" class="logo ht db pa" title="王者荣耀" onclick="pgvSendClick({hottag:'https://pvp.qq.com/web201605/main.head.logo'});">王者荣耀</a></h1>   
+	  <a href="javascript:if(confirm(%27https://pvp.qq.com/cp/a20170621version/index.htm?ADTAG=pvp.index.topkv  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/cp/a20170621version/index.htm?ADTAG=pvp.index.topkv%27" tppabs="https://pvp.qq.com/cp/a20170621version/index.htm?ADTAG=pvp.index.topkv" onClick="pgvSendClick({hottag:'pvp.index.topkv'});" class="view-btn ht db pa" title="查看详情">查看详情</a>
+	  <div class="hero-box fl pr">
+		<p id="FreeHeros-Title"><b>周免英雄</b></p>
+		<ul id="FreeHeros-Cont" class="hero-list clearfix">加载中...</ul>
+		<a href="herolist.shtml.htm" tppabs="https://pvp.qq.com/web201605/herolist.shtml" onclick="pgvSendClick({hottag:'main.mainNav.morehero'});" target="_blank" title="更多英雄" class="more-hero pa">更<br>多<br>英<br>雄</a>
+	  </div>
+	  <div class="login-box clearfix fl pr">
+		<a class="avatar pa spr" href="javascript:if(confirm(%27https://pvp.qq.com/web201605/personal.shtml  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/web201605/personal.shtml%27" tppabs="https://pvp.qq.com/web201605/personal.shtml">
+		  <img src="avatar1.jpg" tppabs="https://game.gtimg.cn/images/yxzj/web201605/main/avatar1.jpg" width="75" height="75">
+		  <span class="pa spr level-ico db">0</span>
+		</a>
+		<!--=====登录后已选择大区=====-->
+		<div id="logined_selected" class="per-infor fl" style="display:none;">
+		  <p class="user-name f12">
+			<em>用户名称</em>
+			<i id="nickname">--</i>
+			<a class="logout_btn" href="javascript:void(0)">注销</a>
+			<a class="select_role" style="color:#2d84d3" href="javascript:void(0)">切换大区&gt;</a>
+		  </p>
+		  <ul class="userinfo-list tc">
+			<li><em class="grade_level">倔强青铜III</em><i>段位</i></li>
+			<li><em class="win_count">-</em><i>胜场</i></li>
+			<li><em class="hero_count">-</em><i>英雄数</i></li>
+			<li><em class="skin_count">-</em><i>皮肤数</i></li>
+		  </ul>
+		</div>
+		<!--=====登录前=====-->
+		<div id="unlogin" class="per-infor txt2 fl" style="display:block;">
+		  <p class="user-name">
+			亲爱的召唤师，欢迎
+	  <a href="javascript:TGDialogS('login_select');" onclick="pgvSendClick({hottag:'main.head.loginBtn'});">登录</a>
+		  </p>
+		  <!--p>登录后查看自己的英雄联盟游戏信息，包括召唤师等级、游戏胜场数、账户信息、声望值 等。</p-->
+		</div>
+		<!--=====登录后未选择大区=====-->
+		<div id="logined_not_selected" class="per-infor txt2 fl" style="display:none;">
+		  <p class="user-name">
+			您已登录，请<a class="select_role" href="javascript:void(0)">选择大区</a>，或者<a class="logout_btn" href="javascript:void(0)">注销</a>
+			<!--您已登录，个人中心暂未开放<a class="logout_btn" href="javascript:void(0)">注销</a>-->
+		  </p>
+		  <!--p>登录后查看自己的英雄联盟游戏信息，包括召唤师等级、游戏胜场数、账户信息、声望值 等。</p-->
+		</div>
+	  </div>
+	</div>           
+</div>
+<div class="pop pr" style="display:none;" id="login_select">
+<a href="javascript:showDialog.hide()" class="close pa db ht">关闭</a>
+<a href="javascript:void(0)" id="wxlogin" class="wx-login pa db ht">微信用户登录</a>
+<a href="javascript:void(0)" id="qqlogin" class="qq-login pa db ht">QQ用户登录</a>
+</div>
+<div class="pop2 pr" style="display:none;" id="area_select">
+<a href="javascript:showDialog.hide()" class="close pa db ht">关闭</a>
+<div class="se-input">
+  <select name="channelContentId" id="channelContentId"><option selected>选择渠道</option></select>
+  <select name="areaContentId" id="areaContentId"><option selected>选择大区</option></select>
+  <select name="roleContentId" id="roleContentId"><option selected>选择角色</option></select>
+</div>
+<div class="se-btn clearfix">
+  <a id="RoleSelectBtn" href="javascript:showDialog.hide()" class="fl ht">确定</a>
+  <a href="javascript:showDialog.hide()" class="fl ht">取消</a>
+</div>
+</div>
+<div class="weixin pr" id="weixin" style="display:none">    
+  <div class="dia-weixin pr">
+	 <a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+  </div>    
+</div>
+<div class="story pr" id="story" style="display:none">    
+  <div class="dia-story">
+	<a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+  </div> 
+</div>
+<div class="skin pr" id="skin" style="display:none">    
+  <div class="dia-skin">
+	<a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+  </div>
+</div>
+<div class="version pr" id="version" style="display:none">    
+  <div class="dia-version">
+	<a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+  </div>
+</div>    
+ <div class="weiquan pr" id="weiquan" style="display:none">    
+  <div class="dia-weiquan">
+	<a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+  </div>
+</div> 
+<div class="hero_pop pr" id="hero_pop" style="display:none">    
+  <div class="dia-hero-pop">
+	<a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+  </div>
+</div>     
+<div class="kefu pr" id="kefu" style="display:none">    
+  <div class="dia-kefu">
+	<a class="dia-close" href="javascript:showDialog.hide()" title="关闭"></a>
+	<p>微信扫一扫，联系客服</p>
+  </div>  
+</div>
+
+         <div class="zkcontent">
+		  	<div class="wrapper-inner">
+
+			 <div class="goTop">
+		        <ul id="side-nav">
+		            <li class="currentCt" id="Submission"><span>我要投稿</span></li>
+		            <li class="snav"><span>最新视频</span></li>
+		           <li class="snav"><span>赛事视频</span></li>
+		           <li class="snav"><span>热门英雄</span></li>
+		            <li class="snav"><span>解说视频</span></li>
+		           <li class="snav"><span>娱乐集锦</span></li>
+		           <li class="snav"><span>官网推荐</span></li>
+		            <li class="goTopImg snav"><img src="icon_back.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/icon_back.png" alt=""></li>
+		        </ul>
+	        </div>
+			<div class="vcontent" id="vcontent">
+                       <div class="con1-pos">
+     <i class="tb1 icon fl"></i>
+     <a href="javascript:if(confirm(%27https://pvp.qq.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/%27" tppabs="https://pvp.qq.com/" target="_blank" title="王者荣耀首页">王者荣耀首页</a>
+     <span>></span>
+     <label>视频中心</label>
+</div>
+				   <!--头部视频-->
+			    	<div class="vcategory snav" id="v_top">
+			    		<div class="vbanner_l"></div>
+			    	    <div class="v_rvideogroup">
+			    	    		<!--<div class="v_ritem">
+			    	    			 <img widht="356" height="163" src="//game.gtimg.cn/images/yxzj/web201605/page/Top_vitemImg01.png">
+			    	    			<ul>
+			    	    				<li class="v_til">王者荣耀同人小说征集</li>
+			    	    				<li class="v_rday">活动时间：2016-05-01 00:00:00~2016-05-31 23:59:59</li>
+			    	    			</ul>
+			    	    		</div>
+			    	    		<div class="v_ritem">
+			    	    			 <img widht="356" height="163" src="//game.gtimg.cn/images/yxzj/web201605/page/Top_vitemImg01.png">
+			    	    			<ul>
+			    	    				<li class="v_til">王者荣耀同人小说征集</li>
+			    	    				<li class="v_rday">活动时间：2016-05-01 00:00:00~2016-05-31 23:59:59</li>
+			    	    			</ul>
+			    	    		</div>
+			    	    		<div class="v_ritem">
+			    	    			 <img widht="356" height="163" src="//game.gtimg.cn/images/yxzj/web201605/page/Top_vitemImg01.png">
+			    	    			<ul>
+			    	    				<li class="v_til">王者荣耀同人小说征集</li>
+			    	    				<li class="v_rday">活动时间：2016-05-01 00:00:00~2016-05-31 23:59:59</li>
+			    	    			</ul>
+			    	    		</div>
+			    	    		<div class="v_ritem clearmr">
+			    	    			 <img widht="356" height="163" src="//game.gtimg.cn/images/yxzj/web201605/page/Top_vitemImg01.png">
+			    	    			<ul>
+			    	    				<li class="v_til">王者荣耀同人小说征集</li>
+			    	    				<li class="v_rday">活动时间：2016-05-01 00:00:00~2016-05-31 23:59:59</li>
+			    	    			</ul>
+			    	    		</div>-->
+			    	    </div>
+			    	    	
+			    </div>	
+			    <div class="vcategory clearfix">
+				    <!--最新视频-->
+				    <div class="vnewvedio " id="v_new_videos">
+				    	<div class="v-new-title">
+				    		<div class="v-new-l fl">
+				    			<a href="" class="fl"><img width="24" height="22" src="icon_vedio.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/icon_vedio.png" title="最新视频" alt="最新视频" ></a>
+				    			<span class="fl v-new-txt">&nbsp;&nbsp;最新视频</span>
+				    		</div>
+					    	<div class="v-new-r fr">
+					    			<a href="javascript:if(confirm(%27https://pvp.qq.com/v/videolist.shtml  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/v/videolist.shtml%27" tppabs="https://pvp.qq.com/v/videolist.shtml" class="v-pt"><span class="v-txtmore">&nbsp;更多视频</span></a>
+					    	</div>
+					    </div>
+				    	<ul class="vlist"  id="videoList"></ul>
+				    </div>
+				     <div class="tab_sct">
+				        <div class="tab_sct-head">
+	                       <img class="fl" width="18" height="24" src="icon_vtop.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/icon_vtop.png" title="视频排行" alt="视频排行" >
+				        <span class="fl v-new-txt">&nbsp;&nbsp;视频排行</span>
+				        </div>
+				        <div class="tab_sct-cont ">
+				            <div id="tabOne" class="ts-cont_topHead">
+				                <ul>
+				                    <li id="dpvlist">今日</li>
+				                    <li id="wpvlist">本周</li>
+				                    <li id="mpvlist">本月</li>
+				                </ul>
+				            </div>
+				            <!--内容-->
+				            <!--今日-->
+				            <div class="ts-cont-ct ts-cont-ct-tb" style="display:block;">
+				                <ul  id="rankList"></ul>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+			    <!--赛事视频-->
+				 <div class="vcategory" id="v_match_videos">
+			    	<div class="v-new-title clearpb">
+			    		<div class="v-new-l fl">
+			    			<a href="" class="fl"><img width="14" height="24" src="icon_vmatch.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/icon_vmatch.png" title="赛事视频" alt="赛事视频" ></a>
+			    			<span class="fl v-new-txt">&nbsp;&nbsp;赛事视频</span>
+			    		</div>
+			    		<div class="v-new-r fr">
+			    			<a href="javascript:if(confirm(%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=751  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=751%27" tppabs="https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=751" class="v-pt"><span class="v-txtmore">&nbsp;更多视频</span></a>
+			    		</div>
+			    	</div>
+			    	<div class="v-new-tab">
+			    		<ul  id="VideoTypeId_751_video">
+			    			<li>全部</li>
+			    			<li>TGA</li>
+			    			<li>TGA</li>
+			    			<li>TGA</li>
+			    			<li>TGA</li>
+			    		</ul>
+			    	</div>
+			    	<ul class="vlist hotcategory" id="matchVideoList"></ul>
+			    </div>			    
+				<!--热门英雄-->
+			    <div class="vcategory " id="v_hothero_videos">
+			    	<div class="v-new-title">
+			    		<div class="v-new-l fl">
+			    			<a href="" class="fl"><img width="16" height="24" src="icon_hero.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/icon_hero.png" title="热门英雄" alt="热门英雄" ></a>
+			    			<span class="fl v-new-txt">&nbsp;&nbsp;热门英雄</span>
+			    		</div>
+			    		<div class="v-select-roles">
+			    			<div class="v-input-box">
+			    			  <input type="text" id="v-selectRoles" placeholder="角色类型">
+				    		</div>
+				    		<a class="soso-go searchBtn" id="searchBtn" title="搜索" href="javascript:;"><i class="vspr vicon-soso"><img src="icon_search.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/icon_search.png"></i></a>
+				    		<ul class="v-select-roles-all">
+				    			<li data-id="675">坦克</li>
+				    			<li data-id="623">战士</li>
+				    			<li data-id="627">刺客</li>
+				    			<li data-id="619">法师</li>
+				    			<li data-id="641">射手</li>
+				    			<li data-id="676">辅助</li>
+				    		</ul>
+			    		</div>
+			    		<div class="v-select-hero">
+					    		<div class="v-input-box">
+					    			<input type="text" id="v-selectHeros" placeholder="请选择英雄">
+					    		</div>
+					    		<a class="soso-go searchBtn" title="搜索" href="javascript:;"><i class="vspr vicon-soso"><img src="icon_search.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/icon_search.png"></i></a>
+					    	<ul class="v-select-hero-all">
+				    			<li>所有角色XXX</li>
+				    			<li>所有角色XXX</li>
+				    			<li>所有角色XXX</li>
+				    			<li>所有角色XXX</li>
+				    			<li>所有角色XXX</li>
+				    		</ul>
+			    	  </div>
+			    		<div class="v-new-r fr">
+			    			<a href="javascript:if(confirm(%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=623  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=623%27" tppabs="https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=623" class="v-pt"><span class="v-txtmore">&nbsp;更多视频</span></a>
+			    		</div>
+			    	</div>
+			    	<ul class="vlist hotcategory" id="heroVideoList"></ul>
+			    </div>
+			    <div class="vcategory clearfix">
+				     <!--解说视频-->
+				    <div class="vnewvedio VIPsay " id="v_say_videos">
+				    	<div class="v-new-title clearpb">
+				    		<div class="v-new-l fl">
+				    			<a href="" class="fl"><img width="16" height="22" src="icon_vcomment.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/icon_vcomment.png" title="解说视频" alt="解说视频" ></a>
+				    			<span class="fl v-new-txt">&nbsp;&nbsp;解说视频</span>
+				    		</div>
+					    	<div class="v-new-r fr">
+					    			<a href="javascript:if(confirm(%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=819  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=819%27" tppabs="https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=819" class="v-pt"><span class="v-txtmore">&nbsp;更多视频</span></a>
+					    	</div>
+					    </div>
+					    <div class="v-new-tabVIP">
+				    		<ul></ul>
+				    	</div>
+				    	<ul class="vlist" id="jsvideoList"></ul>
+				    </div>
+			     	<div class="tab_sct">
+			     		<div class="v-new-title clearpb">
+					        <div class="tab_sct-head vipVeido">
+	                           <img class="fl" width="25" height="26" src="icon_vmvp.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/icon_vmvp.png" title="王牌解说" alt="王牌解说" >
+					        <span class="fl v-new-txt">&nbsp;&nbsp;王牌解说</span>
+					        </div>
+					        <div class="v-new-r fr">
+			    			    <a href="javascript:if(confirm(%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=822  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=822%27" tppabs="https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=822" class="v-pt"><span class="v-txtmore">&nbsp;更多视频</span></a>
+			    		    </div>
+			    		</div>
+			            <div id="tabTwo" class="ts-cont_topHead ts-cont_topHeadVIP v-new-tabVIP">
+			                <ul>
+			                    <li>大神</li>
+			                    <li>搞笑</li>
+			                    <li>美女</li>
+			                </ul>
+			            </div>
+			            <!--内容-->
+			            <!--今日-->
+			            <div class="ts-cont-ct ts-cont-ctTwo" style="display:block;">
+			                <ul  id="wpjsvideoList">
+			            </div>
+				    </div>
+				</div>
+				<!--娱乐集锦-->
+			     <div class="vcategory snav" id="v_inters_videos">
+			    	<div class="v-new-title">
+			    		<div class="v-new-l fl">
+			    			<a href="" class="fl"><img width="24" height="22" src="icon_vedio.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/icon_vedio.png" title="娱乐集锦" alt="娱乐集锦" ></a>
+			    			<span class="fl v-new-txt">&nbsp;&nbsp;娱乐集锦</span>
+			    		</div>
+			         	<div class="v-new-r fr">
+			    			<a href="javascript:if(confirm(%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=616  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=616%27" tppabs="https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=616" class="v-pt"><span class="v-txtmore">&nbsp;更多视频</span></a>
+			    		</div>
+			    	</div>
+			    	<ul class="vlist hotcategory" id="enjoyvideoList"></ul>
+			    </div>
+			     <!--官方推荐-->
+				 <div class="vcategory" id="v_official_videos">
+			    	<div class="v-new-title">
+			    		<div class="v-new-l fl">
+			    			<a href="" class="fl"><img width="26" height="22" src="icon_live.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/page/icon_live.png" title="官方推荐" alt="官方推荐" ></a>
+			    			<span class="fl v-new-txt">&nbsp;&nbsp;官方推荐</span>
+			    		</div>
+			    		<div class="v-new-r fr">
+			    			<a href="javascript:if(confirm(%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=591  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=591%27" tppabs="https://pvp.qq.com/v/videolist.shtml?G_biz=18&iType=591" class="v-pt"><span class="v-txtmore">&nbsp;更多视频</span></a>
+			    		</div>
+			    	</div>
+			    	<ul class="vlist hotcategory"  id="officalvideoList"></ul>
+			    </div>
+			</div>
+		</div>	
+		</div>
+     <div class="footer-wrap">  <div class="footer bc">
+    <div class="foot-t clearfix">
+      <div class="foot-logo fl clearfix">
+        <a href="javascript:if(confirm(%27https://ieg.tencent.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://ieg.tencent.com/%27" tppabs="https://ieg.tencent.com/" target="_blank" class="logo1 spr fl ht">腾讯互动娱乐</a>
+        <a href="javascript:if(confirm(%27https://timi.qq.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://timi.qq.com/%27" tppabs="https://timi.qq.com/" target="_blank" class="logo2 spr fl ht">timi</a>
+      </div>   
+      <div class="fl media-pic">
+        <a href="javascript:if(confirm(%27https://www.youxibao.com/wzlm/?ADTAG=main.coop.img1  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.youxibao.com/wzlm/?ADTAG=main.coop.img1%27" tppabs="https://www.youxibao.com/wzlm/?ADTAG=main.coop.img1" target="_blank"><img src="spk.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/top_banner/spk.png" /></a>
+        <a href="javascript:if(confirm(%27https://pvp.uuu9.com/?ADTAG=main.coop.img2  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://pvp.uuu9.com/?ADTAG=main.coop.img2%27" tppabs="https://pvp.uuu9.com/?ADTAG=main.coop.img2" target="_blank"><img src="youjiu.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/top_banner/youjiu.png" /></a>
+        <a href="javascript:if(confirm(%27https://lh.mofang.com/?ADTAG=main.coop.img3  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://lh.mofang.com/?ADTAG=main.coop.img3%27" tppabs="https://lh.mofang.com/?ADTAG=main.coop.img3" target="_blank"><img src="mofang.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/top_banner/mofang.png" /></a>
+        <a href="javascript:if(confirm(%27https://www.youxiduo.com/game/121033/?ADTAG=main.coop.img4  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.youxiduo.com/game/121033/?ADTAG=main.coop.img4%27" tppabs="https://www.youxiduo.com/game/121033/?ADTAG=main.coop.img4" target="_blank"><img src="youxiduo.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/top_banner/youxiduo.png" /></a>
+        <a href="javascript:if(confirm(%27https://www.18183.com/yxzjol/?ADTAG=main.coop.img5  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.18183.com/yxzjol/?ADTAG=main.coop.img5%27" tppabs="https://www.18183.com/yxzjol/?ADTAG=main.coop.img5" target="_blank"><img src="1883.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/top_banner/1883.png" /></a>
+        <a href="javascript:if(confirm(%27https://news.17173.com/z/pvp?ADTAG=main.coop.img6  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://news.17173.com/z/pvp?ADTAG=main.coop.img6%27" tppabs="https://news.17173.com/z/pvp?ADTAG=main.coop.img6" target="_blank"><img src="17173.png" tppabs="https://game.gtimg.cn/images/yxzj/web201605/top_banner/17173.png" /></a>
+      </div>   
+      <div id="media" class="foot-media pr fr" onclick="pgvSendClick({hottag:'main.footer.media'});">
+        <h3 class="media-tit">合作媒体</h3>
+        <div class="arrow-ico-btn pa"><span class="arrow-ico db spr"></span></div>
+        <ul style="display: none;" id="mediaCon" class="media-list pa">
+           <!-- <li><a target="_blank" href="//www.07073.com/zwang/">07073</a></li>
+           <li><a target="_blank" href="//zhao.265g.com/zw/">265g</a></li>
+           <li><a target="_blank" href="//games.qq.com/d/onlinegame/2/1766/">腾讯游戏频道</a></li>
+           <li><a target="_blank" href="//web.duowan.com/zhenwang/">多玩</a></li>
+           <li><a target="_blank" href="//web.52pk.com/zhenwang/">52PK</a></li>
+           <li><a target="_blank" href="//sy.ooqiu.com/wzry/">全球电竞网</a></li>
+           <li><a target="_blank" href="//www.969g.com/webgame/zw/">969g</a></li>
+           <li><a target="_blank" href="//web.766.com/zwang/index.shtml">766</a></li>
+           <li><a target="_blank" href="//game.pcgames.com.cn/item/12672.html">pcg</a></li>
+           <li><a target="_blank" href="//web.131.com/games/zw/">131</a></li>
+           <li><a target="_blank" href="//www.kaifu.com/gameinfo-zhengwang.html">开服网</a></li>
+           <li><a target="_blank" href="//www.cwan.com/webgame/zwang/">cwan</a></li>
+           <li><a target="_blank" href="//www.40407.com/_zw/">40407</a></li>
+           <li><a target="_blank" href="//www.xskhome.com/zq/zwa/">新手卡之家</a></li>
+           <li><a target="_blank" href="//www.2366.com/webgame/zhenwang/">2366</a></li>
+           <li><a target="_blank" href="//webgame.86wan.com/jsby/zhenwang.html">86wan</a></li>
+           <li><a target="_blank" href="//www.ewoka.com/html/zw/">E蜗卡</a></li>
+           <li><a target="_blank" href="//sns.eeyy.com/zhenwang/">一游网</a></li>
+           <li><a target="_blank" href="//www.juxia.com/webgame/zhenwang/">聚侠网</a></li>  
+           <li><a target="_blank" href="//book.qq.com/">腾讯文学</a></li>
+           <li><a target="_blank" href="//chuangshi.qq.com/">创世中文网</a></li>
+           <li><a target="_blank" href="//yunqi.qq.com/">云起书院</a></li>  -->                
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix">
+      <div class="foot-tips fl">
+        <p class="fb">温馨提示：本游戏适合16岁(含)以上玩家娱乐</p>
+        <p class="f12"><em>抵制不良游戏</em><em>拒绝盗版游戏</em><em>注意自我保护</em><em>谨防受骗上当</em><em>适度游戏益脑</em><em>沉迷游戏伤身</em><em>合理安排时间</em><em>享受健康生活</em></p>
+      </div>
+      <div class="foot-b f12 tr">     
+          <p><a target="_blank" href="javascript:if(confirm(%27https://ieg.tencent.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://ieg.tencent.com/%27" tppabs="https://ieg.tencent.com/">腾讯互动娱乐</a> | <a target="_blank" href="javascript:if(confirm(%27https://game.qq.com/contract.shtml  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://game.qq.com/contract.shtml%27" tppabs="https://game.qq.com/contract.shtml">服务条款</a> | <a target="_blank" href="javascript:if(confirm(%27https://adver.qq.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://adver.qq.com/%27" tppabs="https://adver.qq.com/">广告服务</a> | <a target="_blank" href="javascript:if(confirm(%27https://game.qq.com/hr/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://game.qq.com/hr/%27" tppabs="https://game.qq.com/hr/">腾讯游戏招聘</a> | <a target="_blank" href="javascript:if(confirm(%27https://service.qq.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://service.qq.com/%27" tppabs="https://service.qq.com/">腾讯游戏客服</a> | <a target="_blank" href="javascript:if(confirm(%27https://game.qq.com/gnav  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://game.qq.com/gnav%27" tppabs="https://game.qq.com/gnav">游戏地图</a> | <a target="_blank" href="javascript:if(confirm(%27https://tgact.qq.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://tgact.qq.com/%27" tppabs="https://tgact.qq.com/">游戏活动</a> | <a target="_blank" href="javascript:if(confirm(%27https://game.qq.com/brand/business.htm  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://game.qq.com/brand/business.htm%27" tppabs="https://game.qq.com/brand/business.htm">商务合作</a> | <a target="_blank" href="javascript:if(confirm(%27https://www.qq.com/map/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.qq.com/map/%27" tppabs="https://www.qq.com/map/">网站导航</a></p>
+          <p class="foot-txt"><em class="fl">COPYRIGHT &copy; 1998 &ndash; 2017 TENCENT. ALL RIGHTS RESERVED.</em><a target="_blank" href="javascript:if(confirm(%27https://www.tencent.com/law/mo_law.shtml?/law/copyright.htm  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.tencent.com/law/mo_law.shtml?/law/copyright.htm%27" tppabs="https://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" class="fr">腾讯公司 版权所有</a></p>       
+          <p class="cb"><a target="_blank" href=" javascript:if(confirm(%27https://www.qq.com/culture.shtml  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.qq.com/culture.shtml%27" tppabs="https://www.qq.com/culture.shtml">粤网文[2017]6138-1456号 &amp; ISBN 978-7-7979-8408-9</a> | <a target="_blank" href="javascript:if(confirm(%27https://game.qq.com/culture2.htm  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://game.qq.com/culture2.htm%27" tppabs="https://game.qq.com/culture2.htm">新出网证（粤）字010号</a> | 文网游备字[2016]M-CSG 0059</p>
+          <p class="cb">批准文号：新广出审[2017] 6712号 | 全国文化市场统一举报电话：12318</p>
+      </div>
+  </div>
+  </div>  
+</div>
+	</div>
+      <form id="submit_form" name="submit_form" method="post" action="" target="submit_frame" style="display: none">
+          <input id="submit_form_r0" name="r0" type="hidden" value="frame" />
+          <input id="submit_form_p0" name="p0" type="hidden" value="0" />
+          <input id="submit_form_p1" name="p1" type="hidden" value="0" />
+          <input id="submit_form_p2" name="p2" type="hidden" value="0" />
+      </form>
+      <iframe id="submit_frame" name="submit_frame" width="0" height="0" scrolling="no" frameborder="0" style="display: none"></iframe>	
+
+        <script src="jquery-1.11.3.min-2.js" tppabs="https://ossweb-img.qq.com/images/js/milo/util/jquery-1.11.3.min.js"></script>				
+        <script type="text/javascript" src="milo-1.js" tppabs="https://ossweb-img.qq.com/images/js/milo/milo.js"></script>
+        <script type="text/javascript" src="PAGE_WMP_BIZ_TYPE.js" tppabs="https://gicp.qq.com/wmp/data/js/PAGE_WMP_BIZ_TYPE.js"></script>
+        <script type="text/javascript" src="WdatePicker.js" tppabs="https://gicp.qq.com/wmp/sys/v3.0/js/WdatePicker.js"></script>
+        <script type="text/javascript" src="ajaxfileupload.js" tppabs="https://age.qq.com/v/ajaxfileupload.js"></script>
+        <script src="birthday.js" tppabs="https://gicp.qq.com/wmp/sys/v3.0/js/birthday.js"></script>
+        <script src="wmpCommon_v3.js" tppabs="https://gicp.qq.com/wmp/sys/v3.0/js/wmpCommon_v3.js"></script>
+        <script src="scroller.min.js" tppabs="https://ossweb-img.qq.com/images/js/comm/scroller.min.js"></script>	
+        <script src="kindeditor.js" tppabs="https://lol.qq.com/act/a20141013campus/kindeditor.js"></script>
+        <script src="page-1.js" tppabs="https://pvp.qq.com/web201605/js/page.js"></script>
+        <script src="index.js" tppabs="https://pvp.qq.com/web201605/js/index.js" ></script> 
+        <script src="tgupload.js" tppabs="https://pvp.qq.com/web201605/js/tgupload.js" ></script> 
+        <script src="logic.js" tppabs="https://pvp.qq.com/web201605/js/logic.js"></script>       
+		<script type="text/javascript">
+	    $(function(){
+			var is_open = +GetQueryString('isopen');
+			if(is_open==1){
+			    $('.Win_Submission_Body').show();
+				GetUploadNewsInfo();
+				GetUploadInfo();
+			}
+			/** 
+			 * 获取滚动条距离顶端的距离 
+			 * @return {}支持IE6 
+			 */  
+			function getScrollTop() {  
+			        var scrollPos;  
+			        if (window.pageYOffset) {  
+			        scrollPos = window.pageYOffset; }  
+			        else if (document.compatMode && document.compatMode != 'BackCompat')  
+			        { scrollPos = document.documentElement.scrollTop; }  
+			        else if (document.body) { scrollPos = document.body.scrollTop; }   
+			        return scrollPos;   
+			}  
+		   var  ScrollTopinterval; 
+			function setWin_Submission_Body(){
+				ScrollTopinterval=setInterval(function(){
+				  var  oftop=getScrollTop();
+					$('.Win_Submission').animate({top:oftop+57+'px'})
+				}, 1000);  
+			}
+			 var sideNav=new Scroller({
+			    navId:"side-nav",//浮动导航的ID
+			    navs:"snav",      //导航链接, 可以用标签名或者class名，例如：li或者snav
+			    conts:["v_new_videos","v_match_videos","v_hothero_videos","v_say_videos","v_inters_videos","v_official_videos","vcontent"], //内容板块ID
+			    cls:"curr", //导航选中class
+			    drag:true   //是否能拖动
+			});
+
+		     //热门英雄选择下拉
+			 $('#v-selectRoles').on('focus',function(){
+					$('.v-select-roles-all').show();
+			 });
+			 $(".searchBtn").on('click',function(){
+			 	$('.v-select-roles-all').show();
+			 })
+			 $('.v-select-roles-all li').on('click',function(){
+				var subtype = $(this).attr('data-id');
+				getClassList(subtype,'v-select-hero-all');
+				$('#v-selectRoles').val($(this).html()) ;
+				$('.v-select-roles-all').hide();
+				$('.v-select-hero-all').show();
+				$('.v-select-hero-all li').click(function(){
+					$('#v-selectHeros').val($(this).html()) ;
+					$('.v-select-hero-all').hide();
+				});
+			 });
+			 
+			 //获取最新视频
+			getNewList(1);
+			//默认加载英雄视频数据
+			LoadSubTypeList(623,0,heroVideoList,6,1,182,110);
+			//娱乐集锦
+			LoadSubTypeList(616,0,enjoyvideoList,6,1,182,110);
+			//官方视频
+			LoadSubTypeList(591,0,officalvideoList,6,1,182,110);
+
+
+
+
+	        $('.Win_Submission_close').on('click',function(){
+	       		 $('.Win_Submission_Body').hide();
+	       		 clearInterval(ScrollTopinterval);//关闭弹窗 ，清除计时器 （提交成功时，仍需调用此句代码一次）
+	       });
+	       $('#Submission').on('click',function(){
+	       		$('.Win_Submission_Body').show();
+				GetUploadNewsInfo();
+				GetUploadInfo();
+				//setWin_Submission_Body();
+	       });
+	        
+	        $('.up_radio span').eq(0).css({'display':'block'})
+	       $('.up_radio').on('click',function(){
+	       	    $('.up_radio span').hide();
+	       	    $(this).find('span').css({'display':'block'});
+				var SubmissionYype=$(this).find('span').attr('data-id');
+				if(SubmissionYype=="1"){
+					$('.w_word_t,.w_word_from').css({'display': 'block'})
+					$('.w_video_t,.w_video_from').css({'display': 'none'})
+				}else{
+					$('.w_word_t,.w_word_from').css({'display': 'none'})
+					$('.w_video_t,.w_video_from').css({'display': 'block'}) 
+				}
+
+	       })
+	    })
+	</script>
+	</body>
+</html>
