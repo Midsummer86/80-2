@@ -107,8 +107,18 @@ a:hover {
     width: 100%;
     height: 1100px;
     background: url(../images/17387102732315.jpg) no-repeat center;
+    .a-hide {
+        width: 800px;
+        height: 400px;
+        position: absolute;
+        font-size: 0;
+        top: 150px;
+        left: 50%;
+        margin-left: -400px;  
+    }
     .header {
         background-color: rgba(0, 0, 0,0.7);
+        position: relative;
         .nav {
             height: 84px;
             position: relative;
@@ -179,10 +189,12 @@ a:hover {
                 }         
             }           
         }
-        .hidebox{
+        .hidebox {
+            z-index: 100;
+            position: absolute;
             width: 100%;
             height: 350px;
-            background: rgba(0, 0, 0,0.1);
+            background: rgba(0, 0, 0,0.5);
             display: none;
             ul{
                 width: 970px;
