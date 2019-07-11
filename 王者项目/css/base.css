@@ -1,0 +1,81 @@
+/*清除默认样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+input {
+	/*清除默认边框*/
+	border: 0;
+	/*清除默认轮廓线*/
+	outline: 0;
+}
+i,em {
+	font-style: normal;
+}
+/*常用的样式*/
+body {
+	font: 14px arial, 'microsoft yahei';
+	color: #363636;
+}
+img {
+	border: 0 none;   /*清除ie6默认图片边框*/
+	vertical-align: middle;   /*清除图片默认底部缝隙*/
+}
+a {
+	color: #050505;
+}
+a:hover {
+	color: #00b4ff;
+}
+/*版心*/
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+/*双伪元素清除浮动*/
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+/*字体图标*/
+/*声明字体*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/iconfont.woff') format('woff'),
+  url('../fonts/iconfont.ttf') format('truetype'),
+  url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: 'iconfont';
+	font-size: 16px;
+}
+/*怎样在一行出现省略号*/
+.foot .tuf p {
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
