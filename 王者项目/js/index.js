@@ -98,3 +98,19 @@ $('.both .both-right #f-list a').mouseleave (function () {
     var i = $(this).index();
     $('.both .both-right .tool').eq(i).css('display','none');
 })
+
+
+// 精品栏目区
+$('.goods .goods-box .left li').mouseenter (function () {
+    var i = $(this).index();
+    $('#moreshow1 p').eq(i).stop().show()
+    .siblings('p').stop().hide();
+})
+
+
+// 精品赛事区
+$('.goods2 .goods-box .left li').mouseenter (function () {
+    var i = $(this).index();
+    $('#moreshow2 p').eq(i).stop().show()
+    .siblings('p').stop().hide();
+})

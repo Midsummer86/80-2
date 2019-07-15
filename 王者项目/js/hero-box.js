@@ -4,7 +4,7 @@ $('#h-left li').mouseenter (function () {
     $('#h-left li .hero-p-list').eq(i).css('display','block')
     .parent('li').siblings('li').children('.hero-p-list').css('display','none')
     $('.hero-box').eq(i).css('display','block')
-    .siblings('.hero-box').css('display','none')
+    .siblings('.hero-box').css('display','none');
 })
 
 // $('#h-left li img').mouseenter (function () {
