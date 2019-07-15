@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap - 简洁、直观、强悍、移动设备优先的前端开发框架，让web开发更迅速、简单。">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="author" content="王赛 翻译整理">
+
+<title>
+  
+    Wall of browser bugs &middot; Bootstrap
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../dist/css/bootstrap.min.css" tppabs="http://v4.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="../assets/css/docs.min.css" tppabs="http://v4.bootcss.com/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Google Web fonts -->
+<link href="../../fonts.useso.com/css-family=Roboto-300,400,400italic,500.css" tppabs="http://fonts.useso.com/css?family=Roboto:300,400,400italic,500" rel="stylesheet">
+<link href="../../fonts.useso.com/css-family=Source+Sans+Pro-400,300,400italic,600.css" tppabs="http://fonts.useso.com/css?family=Source+Sans+Pro:400,300,400italic,600" rel='stylesheet' type='text/css'>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js" tppabs="http://v4.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="../assets/js/ie-emulation-modes-warning.js" tppabs="http://v4.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+<link rel="icon" href="/favicon.ico">
+
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../hm.baidu.com/hm.js-fc4ecdb3b7e797fdd7347e29dbec6802.js"/*tpa=http://hm.baidu.com/hm.js?fc4ecdb3b7e797fdd7347e29dbec6802*/;
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  </head>
+  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <header class="navbar navbar-light navbar-static-top bd-navbar" role="banner">
+  
+
+  <div class="clearfix">
+    <button class="navbar-toggler pull-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
+      &#9776;
+    </button>
+    <a class="navbar-brand hidden-sm-up" href="../index.htm" tppabs="http://v4.bootcss.com/">
+      Bootstrap
+    </a>
+  </div>
+  <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+    <nav class="nav navbar-nav">
+      <a class="nav-item nav-link " href="../index.htm" tppabs="http://v4.bootcss.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Bootstrap</a>
+      <a class="nav-item nav-link active" href="../getting-started/introduction/index.htm" tppabs="http://v4.bootcss.com/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">文档</a>
+      <a class="nav-item nav-link " href="../examples/index.htm" tppabs="http://v4.bootcss.com/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">实例</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://themes.getbootstrap.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://themes.getbootstrap.com/%27" tppabs="http://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">主题</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://expo.bootcss.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://expo.bootcss.com/%27" tppabs="http://expo.bootcss.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">优站精选</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://blog.getbootstrap.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://blog.getbootstrap.com/%27" tppabs="http://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">博客</a>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="bd-pageheader">
+      <div class="container">
+        
+  <h1>Wall of browser bugs</h1>
+  <p class="lead">
+    A list of the browser bugs that Bootstrap is currently grappling with.
+  </p>
+
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-md-push-9 bd-sidebar">
+          <div class="bd-sidebar">
+
+  <form class="bd-search hidden-sm-down">
+    <input type="text" class="form-control" id="search-input" placeholder="Search...">
+    <div class="dropdown-menu bd-search-results" id="search-results"></div>
+  </form>
+
+  <nav class="bd-links" id="docsNavbarContent">
+    
+      
+      
+      
+
+      
+
+      <div class="bd-toc-item ">
+        
+          <a class="bd-toc-link" href="../getting-started/introduction/index.htm" tppabs="http://v4.bootcss.com/getting-started/introduction">
+        
+          Getting started
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../getting-started/introduction/index.htm" tppabs="http://v4.bootcss.com/getting-started/introduction">
+                Introduction
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../getting-started/download/index.htm" tppabs="http://v4.bootcss.com/getting-started/download">
+                Download
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../getting-started/browsers-devices/index.htm" tppabs="http://v4.bootcss.com/getting-started/browsers-devices">
+                Browsers & devices
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../getting-started/options/index.htm" tppabs="http://v4.bootcss.com/getting-started/options">
+                Options
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../getting-started/flexbox/index.htm" tppabs="http://v4.bootcss.com/getting-started/flexbox">
+                Flexbox
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../getting-started/build-tools/index.htm" tppabs="http://v4.bootcss.com/getting-started/build-tools">
+                Build tools
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../getting-started/best-practices/index.htm" tppabs="http://v4.bootcss.com/getting-started/best-practices">
+                Best practices
+              </a>
+
+              
+            </li>
+          
+        </ul>
+      </div>
+    
+      
+      
+      
+
+      
+
+      <div class="bd-toc-item ">
+        
+          <a class="bd-toc-link" href="../layout/overview/index.htm" tppabs="http://v4.bootcss.com/layout/overview">
+        
+          Layout
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../layout/overview/index.htm" tppabs="http://v4.bootcss.com/layout/overview">
+                Overview
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../layout/grid/index.htm" tppabs="http://v4.bootcss.com/layout/grid">
+                Grid
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../layout/media-object/index.htm" tppabs="http://v4.bootcss.com/layout/media-object">
+                Media object
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../layout/responsive-utilities/index.htm" tppabs="http://v4.bootcss.com/layout/responsive-utilities">
+                Responsive utilities
+              </a>
+
+              
+            </li>
+          
+        </ul>
+      </div>
+    
+      
+      
+      
+
+      
+
+      <div class="bd-toc-item ">
+        
+          <a class="bd-toc-link" href="../content/reboot/index.htm" tppabs="http://v4.bootcss.com/content/reboot">
+        
+          Content
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../content/reboot/index.htm" tppabs="http://v4.bootcss.com/content/reboot">
+                Reboot
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../content/typography/index.htm" tppabs="http://v4.bootcss.com/content/typography">
+                Typography
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../content/code/index.htm" tppabs="http://v4.bootcss.com/content/code">
+                Code
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../content/images/index.htm" tppabs="http://v4.bootcss.com/content/images">
+                Images
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../content/tables/index.htm" tppabs="http://v4.bootcss.com/content/tables">
+                Tables
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../content/figures/index.htm" tppabs="http://v4.bootcss.com/content/figures">
+                Figures
+              </a>
+
+              
+            </li>
+          
+        </ul>
+      </div>
+    
+      
+      
+      
+
+      
+
+      <div class="bd-toc-item ">
+        
+          <a class="bd-toc-link" href="../components/buttons/index.htm" tppabs="http://v4.bootcss.com/components/buttons">
+        
+          Components
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/buttons/index.htm" tppabs="http://v4.bootcss.com/components/buttons">
+                Buttons
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/button-group/index.htm" tppabs="http://v4.bootcss.com/components/button-group">
+                Button group
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/button-dropdown/index.htm" tppabs="http://v4.bootcss.com/components/button-dropdown">
+                Button dropdown
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/forms/index.htm" tppabs="http://v4.bootcss.com/components/forms">
+                Forms
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/input-group/index.htm" tppabs="http://v4.bootcss.com/components/input-group">
+                Input group
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/dropdowns/index.htm" tppabs="http://v4.bootcss.com/components/dropdowns">
+                Dropdowns
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/jumbotron/index.htm" tppabs="http://v4.bootcss.com/components/jumbotron">
+                Jumbotron
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/label/index.htm" tppabs="http://v4.bootcss.com/components/label">
+                Label
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/alerts/index.htm" tppabs="http://v4.bootcss.com/components/alerts">
+                Alerts
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/card/index.htm" tppabs="http://v4.bootcss.com/components/card">
+                Card
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/navs/index.htm" tppabs="http://v4.bootcss.com/components/navs">
+                Navs
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/navbar/index.htm" tppabs="http://v4.bootcss.com/components/navbar">
+                Navbar
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/breadcrumb/index.htm" tppabs="http://v4.bootcss.com/components/breadcrumb">
+                Breadcrumb
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/pagination/index.htm" tppabs="http://v4.bootcss.com/components/pagination">
+                Pagination
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/progress/index.htm" tppabs="http://v4.bootcss.com/components/progress">
+                Progress
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/list-group/index.htm" tppabs="http://v4.bootcss.com/components/list-group">
+                List group
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/modal/index.htm" tppabs="http://v4.bootcss.com/components/modal">
+                Modal
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/scrollspy/index.htm" tppabs="http://v4.bootcss.com/components/scrollspy">
+                Scrollspy
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/tooltips/index.htm" tppabs="http://v4.bootcss.com/components/tooltips">
+                Tooltips
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/popovers/index.htm" tppabs="http://v4.bootcss.com/components/popovers">
+                Popovers
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/collapse/index.htm" tppabs="http://v4.bootcss.com/components/collapse">
+                Collapse
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/carousel/index.htm" tppabs="http://v4.bootcss.com/components/carousel">
+                Carousel
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../components/utilities/index.htm" tppabs="http://v4.bootcss.com/components/utilities">
+                Utilities
+              </a>
+
+              
+            </li>
+          
+        </ul>
+      </div>
+    
+      
+      
+      
+
+      
+
+      <div class="bd-toc-item ">
+        
+          <a class="bd-toc-link" href="../about/history/index.htm" tppabs="http://v4.bootcss.com/about/history">
+        
+          About
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../about/history/index.htm" tppabs="http://v4.bootcss.com/about/history">
+                History
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../about/team/index.htm" tppabs="http://v4.bootcss.com/about/team">
+                Team
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../about/brand/index.htm" tppabs="http://v4.bootcss.com/about/brand">
+                Brand
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../about/license/index.htm" tppabs="http://v4.bootcss.com/about/license">
+                License
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../about/translations/index.htm" tppabs="http://v4.bootcss.com/about/translations">
+                Translations
+              </a>
+
+              
+            </li>
+          
+        </ul>
+      </div>
+    
+      
+      
+      
+
+      
+
+      <div class="bd-toc-item ">
+        
+          <a class="bd-toc-link" href="../migration/index.htm" tppabs="http://v4.bootcss.com/migration/">
+        
+          Migration
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+        </ul>
+      </div>
+    
+  </nav>
+</div>
+
+        </div>
+        <div class="col-md-9 col-md-pull-3 bd-content">
+          <h1 class="bd-title">Wall of browser bugs</h1>
+          <p>Bootstrap currently works around several outstanding browser bugs in major browsers to deliver the best cross-browser experience possible. Some bugs, like those listed below, cannot be solved by us.</p>
+
+<p>We publicly list browser bugs that are impacting us here, in the hopes of expediting the process of fixing them. For information on Bootstrap’s browser compatibility, <a href="../getting-started/browsers-devices/index.htm#supported-browsers" tppabs="http://v4.bootcss.com/getting-started/browsers-devices/#supported-browsers">see our browser compatibility docs</a>.</p>
+
+<p>Also see <a href="javascript:if(confirm(%27https://docs.google.com/document/d/1LPaPA30bLUB_publLIMF0RlhdnPx_ePXm7oW02iiT6o  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.google.com/document/d/1LPaPA30bLUB_publLIMF0RlhdnPx_ePXm7oW02iiT6o%27" tppabs="https://docs.google.com/document/d/1LPaPA30bLUB_publLIMF0RlhdnPx_ePXm7oW02iiT6o">jQuery’s browser bug workarounds</a>.</p>
+
+<div class="table-responsive">
+  <table class="bd-browser-bugs table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Browser(s)</th>
+        <th>Summary of bug</th>
+        <th>Upstream bug(s)</th>
+        <th>Bootstrap issue(s)</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>Internet Explorer 11 &amp; Microsoft Edge
+</td>
+        <td><p>Hovered element still remains in <code>:hover</code> state after scrolling away.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://connect.microsoft.com/IE/feedback/details/926665  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://connect.microsoft.com/IE/feedback/details/926665%27" tppabs="https://connect.microsoft.com/IE/feedback/details/926665">IE bug #926665</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/14211  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/14211%27" tppabs="https://github.com/twbs/bootstrap/issues/14211">#14211</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Internet Explorer 11 &amp; Microsoft Edge
+</td>
+        <td><p>When hovering over a <code>&lt;select&gt;</code> menu item, the cursor for the element underneath the menu is displayed.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://connect.microsoft.com/IE/feedback/details/963961  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://connect.microsoft.com/IE/feedback/details/963961%27" tppabs="https://connect.microsoft.com/IE/feedback/details/963961">IE bug #963961</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/14528  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/14528%27" tppabs="https://github.com/twbs/bootstrap/issues/14528">#14528</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Internet Explorer 11 &amp; Microsoft Edge
+</td>
+        <td><p>CSS <code>border-radius</code> sometimes causes lines of bleed-through of the <code>background-color</code> of the parent element.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://connect.microsoft.com/IE/feedback/details/1463734  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://connect.microsoft.com/IE/feedback/details/1463734%27" tppabs="https://connect.microsoft.com/IE/feedback/details/1463734">IE bug #1463734</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/16671  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/16671%27" tppabs="https://github.com/twbs/bootstrap/issues/16671">#16671</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Firefox
+</td>
+        <td><p><code>.table-bordered</code> with an empty <code>&lt;tbody&gt;</code> is missing borders.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugzilla.mozilla.org/show_bug.cgi?id=1023761  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugzilla.mozilla.org/show_bug.cgi?id=1023761%27" tppabs="https://bugzilla.mozilla.org/show_bug.cgi?id=1023761">Mozilla bug #1023761</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/13453  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/13453%27" tppabs="https://github.com/twbs/bootstrap/issues/13453">#13453</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Firefox
+</td>
+        <td><p><code>max-width: 100%;</code> doesn’t work inside tables.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugzilla.mozilla.org/show_bug.cgi?id=975632  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugzilla.mozilla.org/show_bug.cgi?id=975632%27" tppabs="https://bugzilla.mozilla.org/show_bug.cgi?id=975632">Mozilla bug #975632</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/10690  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/10690%27" tppabs="https://github.com/twbs/bootstrap/issues/10690">#10690</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Firefox (Windows)
+</td>
+        <td><p>Java applets that are descendants of elements with forced hardware acceleration using <code>translate3d(0,0,0)</code> are invisible.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugzilla.mozilla.org/show_bug.cgi?id=1048279  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugzilla.mozilla.org/show_bug.cgi?id=1048279%27" tppabs="https://bugzilla.mozilla.org/show_bug.cgi?id=1048279">Mozilla bug #1048279</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/14124  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/14124%27" tppabs="https://github.com/twbs/bootstrap/issues/14124">#14124</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Firefox
+</td>
+        <td><p>Button elements with <code>width: 100%</code> become cropped in long tables.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugzilla.mozilla.org/show_bug.cgi?id=1060131  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugzilla.mozilla.org/show_bug.cgi?id=1060131%27" tppabs="https://bugzilla.mozilla.org/show_bug.cgi?id=1060131">Mozilla bug #1060131</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/14320  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/14320%27" tppabs="https://github.com/twbs/bootstrap/issues/14320">#14320</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Firefox
+</td>
+        <td><p>If the disabled state of a form control is changed via JavaScript, the normal state doesn’t return after refreshing the page.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugzilla.mozilla.org/show_bug.cgi?id=654072  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugzilla.mozilla.org/show_bug.cgi?id=654072%27" tppabs="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">Mozilla bug #654072</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/793  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/793%27" tppabs="https://github.com/twbs/bootstrap/issues/793">#793</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Chrome (OS X)
+</td>
+        <td><p>Clicking above <code>&lt;input type="number"&gt;</code> increment button flashes the decrement button.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://code.google.com/p/chromium/issues/detail?id=419108  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://code.google.com/p/chromium/issues/detail?id=419108%27" tppabs="https://code.google.com/p/chromium/issues/detail?id=419108">Chromium issue #419108</a>
+</td>
+        <td>Offshoot of <a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/8350  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/8350%27" tppabs="https://github.com/twbs/bootstrap/issues/8350">#8350</a> &amp; <a href="javascript:if(confirm(%27https://code.google.com/p/chromium/issues/detail?id=337668  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://code.google.com/p/chromium/issues/detail?id=337668%27" tppabs="https://code.google.com/p/chromium/issues/detail?id=337668">Chromium issue #337668</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Chrome (OS X)
+</td>
+        <td><p>Caps Lock indicator not shown in <code>&lt;input type="password"&gt;</code> with <code>display: block</code></p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://code.google.com/p/chromium/issues/detail?id=460200  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://code.google.com/p/chromium/issues/detail?id=460200%27" tppabs="https://code.google.com/p/chromium/issues/detail?id=460200">Chromium issue #460200</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/15832  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/15832%27" tppabs="https://github.com/twbs/bootstrap/issues/15832">#15832</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Chrome
+</td>
+        <td><p>Focus ring of image map within a modal is displayed in the wrong location.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://code.google.com/p/chromium/issues/detail?id=475128  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://code.google.com/p/chromium/issues/detail?id=475128%27" tppabs="https://code.google.com/p/chromium/issues/detail?id=475128">Chromium issue #475128</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/16180  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/16180%27" tppabs="https://github.com/twbs/bootstrap/issues/16180">#16180</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Chrome
+</td>
+        <td><p>Incorrect viewport size used for media queries when printing.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://code.google.com/p/chromium/issues/detail?id=273306  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://code.google.com/p/chromium/issues/detail?id=273306%27" tppabs="https://code.google.com/p/chromium/issues/detail?id=273306">Chromium issue #273306</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/12078  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/12078%27" tppabs="https://github.com/twbs/bootstrap/issues/12078">#12078</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Chrome
+</td>
+        <td><p>CSS infinite linear animation with alpha transparency leaks memory.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://code.google.com/p/chromium/issues/detail?id=429375  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://code.google.com/p/chromium/issues/detail?id=429375%27" tppabs="https://code.google.com/p/chromium/issues/detail?id=429375">Chromium issue #429375</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/14409  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/14409%27" tppabs="https://github.com/twbs/bootstrap/issues/14409">#14409</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Chrome
+</td>
+        <td><p><code>:focus</code> <code>outline</code> style causes cursor to not be displayed when toggling a <code>readonly</code> <code>&lt;input&gt;</code> to read-write.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://code.google.com/p/chromium/issues/detail?id=465274  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://code.google.com/p/chromium/issues/detail?id=465274%27" tppabs="https://code.google.com/p/chromium/issues/detail?id=465274">Chromium issue #465274</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/16022  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/16022%27" tppabs="https://github.com/twbs/bootstrap/issues/16022">#16022</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Chrome
+</td>
+        <td><p><code>width: 1%</code> on nested table cell causes its table to hog horizontal space.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://code.google.com/p/chromium/issues/detail?id=427994  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://code.google.com/p/chromium/issues/detail?id=427994%27" tppabs="https://code.google.com/p/chromium/issues/detail?id=427994">Chromium issue #427994</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/16372  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/16372%27" tppabs="https://github.com/twbs/bootstrap/issues/16372">#16372</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Chrome (Windows &amp; Linux)
+</td>
+        <td><p>Animation glitch when returning to inactive tab after animations occurred while tab was hidden.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://code.google.com/p/chromium/issues/detail?id=449180  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://code.google.com/p/chromium/issues/detail?id=449180%27" tppabs="https://code.google.com/p/chromium/issues/detail?id=449180">Chromium issue #449180</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/15298  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/15298%27" tppabs="https://github.com/twbs/bootstrap/issues/15298">#15298</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Safari
+</td>
+        <td><p><code>width: 1%</code> on nested table cell causes its table to hog horizontal space.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugs.webkit.org/show_bug.cgi?id=144696  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugs.webkit.org/show_bug.cgi?id=144696%27" tppabs="https://bugs.webkit.org/show_bug.cgi?id=144696">WebKit bug #144696</a>, <a href="javascript:if(confirm(%27https://openradar.appspot.com/20839572  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://openradar.appspot.com/20839572%27" tppabs="https://openradar.appspot.com/20839572">Apple Safari Radar #20839572</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/16372  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/16372%27" tppabs="https://github.com/twbs/bootstrap/issues/16372">#16372</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Safari
+</td>
+        <td><p>Incorrect placement of <code>position: fixed</code> element when it’s a child of a <code>position: relative; left: X%;</code> element.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugs.webkit.org/show_bug.cgi?id=147284  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugs.webkit.org/show_bug.cgi?id=147284%27" tppabs="https://bugs.webkit.org/show_bug.cgi?id=147284">WebKit bug #147284</a>, <a href="javascript:if(confirm(%27https://openradar.appspot.com/21993128  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://openradar.appspot.com/21993128%27" tppabs="https://openradar.appspot.com/21993128">Apple Safari Radar #21993128</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/16814  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/16814%27" tppabs="https://github.com/twbs/bootstrap/issues/16814">#16814</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Safari (OS X)
+</td>
+        <td><p>Scrollbar clipped in <code>select[multiple]</code> with padding.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugs.webkit.org/show_bug.cgi?id=128489  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugs.webkit.org/show_bug.cgi?id=128489%27" tppabs="https://bugs.webkit.org/show_bug.cgi?id=128489">WebKit bug #128489</a>, <a href="javascript:if(confirm(%27https://openradar.appspot.com/19208483  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://openradar.appspot.com/19208483%27" tppabs="https://openradar.appspot.com/19208483">Apple Safari Radar #19208483</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/12536  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/12536%27" tppabs="https://github.com/twbs/bootstrap/issues/12536">#12536</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Safari (OS X)
+</td>
+        <td><p>Weird button behavior with some <code>&lt;input type="number"&gt;</code> elements.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugs.webkit.org/show_bug.cgi?id=137269  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugs.webkit.org/show_bug.cgi?id=137269%27" tppabs="https://bugs.webkit.org/show_bug.cgi?id=137269">WebKit bug #137269</a>, <a href="javascript:if(confirm(%27https://openradar.appspot.com/18834768  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://openradar.appspot.com/18834768%27" tppabs="https://openradar.appspot.com/18834768">Apple Safari Radar #18834768</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/8350  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/8350%27" tppabs="https://github.com/twbs/bootstrap/issues/8350">#8350</a>, <a href="javascript:if(confirm(%27https://github.com/necolas/normalize.css/issues/283  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/necolas/normalize.css/issues/283%27" tppabs="https://github.com/necolas/normalize.css/issues/283">Normalize #283</a>, <a href="javascript:if(confirm(%27https://code.google.com/p/chromium/issues/detail?id=337668  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://code.google.com/p/chromium/issues/detail?id=337668%27" tppabs="https://code.google.com/p/chromium/issues/detail?id=337668">Chromium issue #337668</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Safari (OS X)
+</td>
+        <td><p><code>display: table-cell;</code> within media query renders incorrectly when resizing the window.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugs.webkit.org/show_bug.cgi?id=138167  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugs.webkit.org/show_bug.cgi?id=138167%27" tppabs="https://bugs.webkit.org/show_bug.cgi?id=138167">WebKit bug #138167</a>, <a href="javascript:if(confirm(%27https://openradar.appspot.com/18987206  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://openradar.appspot.com/18987206%27" tppabs="https://openradar.appspot.com/18987206">Apple Safari Radar #18987206</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/9774  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/9774%27" tppabs="https://github.com/twbs/bootstrap/issues/9774">#9774</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Safari (OS X)
+</td>
+        <td><p>Small font size when printing webpage with fixed-width <code>.container</code>.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugs.webkit.org/show_bug.cgi?id=138192  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugs.webkit.org/show_bug.cgi?id=138192%27" tppabs="https://bugs.webkit.org/show_bug.cgi?id=138192">WebKit bug #138192</a>, <a href="javascript:if(confirm(%27https://openradar.appspot.com/19435018  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://openradar.appspot.com/19435018%27" tppabs="https://openradar.appspot.com/19435018">Apple Safari Radar #19435018</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/14868  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/14868%27" tppabs="https://github.com/twbs/bootstrap/issues/14868">#14868</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Safari (OS X)
+</td>
+        <td><p>Focus ring of image map within a modal is displayed in the wrong location.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugs.webkit.org/show_bug.cgi?id=143527  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugs.webkit.org/show_bug.cgi?id=143527%27" tppabs="https://bugs.webkit.org/show_bug.cgi?id=143527">WebKit bug #143527</a>, <a href="javascript:if(confirm(%27https://openradar.appspot.com/21908735  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://openradar.appspot.com/21908735%27" tppabs="https://openradar.appspot.com/21908735">Apple Safari Radar #21908735</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/16180  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/16180%27" tppabs="https://github.com/twbs/bootstrap/issues/16180">#16180</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Safari (iOS)
+</td>
+        <td><p><code>transform: translate3d(0,0,0);</code> rendering bug.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugs.webkit.org/show_bug.cgi?id=138162  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugs.webkit.org/show_bug.cgi?id=138162%27" tppabs="https://bugs.webkit.org/show_bug.cgi?id=138162">WebKit bug #138162</a>, <a href="javascript:if(confirm(%27https://openradar.appspot.com/18804973  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://openradar.appspot.com/18804973%27" tppabs="https://openradar.appspot.com/18804973">Apple Safari Radar #18804973</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/14603  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/14603%27" tppabs="https://github.com/twbs/bootstrap/issues/14603">#14603</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Safari (iOS)
+</td>
+        <td><p>Text input’s cursor doesn’t move while scrolling the page.</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugs.webkit.org/show_bug.cgi?id=138201  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugs.webkit.org/show_bug.cgi?id=138201%27" tppabs="https://bugs.webkit.org/show_bug.cgi?id=138201">WebKit bug #138201</a>, <a href="javascript:if(confirm(%27https://openradar.appspot.com/18819624  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://openradar.appspot.com/18819624%27" tppabs="https://openradar.appspot.com/18819624">Apple Safari Radar #18819624</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/14708  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/14708%27" tppabs="https://github.com/twbs/bootstrap/issues/14708">#14708</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Safari (iOS)
+</td>
+        <td><p><code>display: block</code> causes text of temporal <code>&lt;input&gt;</code>s to become vertically misaligned</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugs.webkit.org/show_bug.cgi?id=139848  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugs.webkit.org/show_bug.cgi?id=139848%27" tppabs="https://bugs.webkit.org/show_bug.cgi?id=139848">WebKit bug #139848</a>, <a href="javascript:if(confirm(%27https://openradar.appspot.com/19434878  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://openradar.appspot.com/19434878%27" tppabs="https://openradar.appspot.com/19434878">Apple Safari Radar #19434878</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/11266  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/11266%27" tppabs="https://github.com/twbs/bootstrap/issues/11266">#11266</a>, <a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/13098  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/13098%27" tppabs="https://github.com/twbs/bootstrap/issues/13098">#13098</a>
+</td>
+      </tr>
+      
+      <tr>
+        <td>Safari (iOS)
+</td>
+        <td><p>Tapping below <code>&lt;input&gt;</code>s can focus them in some cases</p>
+</td>
+        <td><a href="javascript:if(confirm(%27https://bugs.webkit.org/show_bug.cgi?id=146244  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://bugs.webkit.org/show_bug.cgi?id=146244%27" tppabs="https://bugs.webkit.org/show_bug.cgi?id=146244">WebKit bug #146244</a>, <a href="javascript:if(confirm(%27https://openradar.appspot.com/21509310  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://openradar.appspot.com/21509310%27" tppabs="https://openradar.appspot.com/21509310">Apple Safari Radar #21509310</a>
+</td>
+        <td><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/issues/15968  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/issues/15968%27" tppabs="https://github.com/twbs/bootstrap/issues/15968">#15968</a>
+</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="bd-footer text-muted" role="contentinfo">
+  <div class="container">
+    <ul class="bd-footer-links">
+      <li><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap%27" tppabs="https://github.com/twbs/bootstrap">GitHub</a></li>
+      <li><a href="javascript:if(confirm(%27https://twitter.com/getbootstrap  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/getbootstrap%27" tppabs="https://twitter.com/getbootstrap">Twitter</a></li>
+      <li><a href="../getting-started/index.htm#examples" tppabs="http://v4.bootcss.com/getting-started/#examples">Examples</a></li>
+      <li><a href="../about/index.htm" tppabs="http://v4.bootcss.com/about/">About</a></li>
+    </ul>
+    <p>Designed and built with all the love in the world by <a href="javascript:if(confirm(%27https://twitter.com/mdo  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/mdo%27" tppabs="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="javascript:if(confirm(%27https://twitter.com/fat  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/fat%27" tppabs="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="javascript:if(confirm(%27https://github.com/orgs/twbs/people  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/orgs/twbs/people%27" tppabs="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/graphs/contributors  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/graphs/contributors%27" tppabs="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+    <p>Currently v4.0.0-alpha. Code licensed <a rel="license" href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/blob/master/LICENSE  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/blob/master/LICENSE%27" tppabs="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="javascript:if(confirm(%27https://creativecommons.org/licenses/by/3.0/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://creativecommons.org/licenses/by/3.0/%27" tppabs="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+  </div>
+</footer>
+
+<script src="../../cdn.bootcss.com/jquery/1.11.3/jquery.min.js" tppabs="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+
+  <script src="../dist/js/bootstrap.js" tppabs="http://v4.bootcss.com/dist/js/bootstrap.js"></script>
+
+
+
+  
+    <script src="../assets/js/vendor/holder.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/holder.min.js"></script>
+  
+    <script src="../assets/js/vendor/jekyll-search.js" tppabs="http://v4.bootcss.com/assets/js/vendor/jekyll-search.js"></script>
+  
+    <script src="../assets/js/vendor/ZeroClipboard.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/ZeroClipboard.min.js"></script>
+  
+    <script src="../assets/js/vendor/anchor.js" tppabs="http://v4.bootcss.com/assets/js/vendor/anchor.js"></script>
+  
+    <script src="../assets/js/vendor/tether.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/tether.min.js"></script>
+  
+    <script src="../assets/js/src/application.js" tppabs="http://v4.bootcss.com/assets/js/src/application.js"></script>
+  
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js" tppabs="http://v4.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+SimpleJekyllSearch.init({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('search-results'),
+  searchResultTemplate: '<a class="dropdown-item" href="{url}">{title}</a>',
+  noResultsText: '<div class="dropdown-item no-results">Sorry, there are no results for that search.</div>',
+  dataSource: '../search.json.js'/*tpa=http://v4.bootcss.com/search.json*/
+})
+
+Holder.addTheme('gray', {
+  background: '#777',
+  foreground: 'rgba(255,255,255,.75)',
+  font: 'Helvetica',
+  fontweight: 'normal'
+})
+</script>
+
+  </body>
+</html>

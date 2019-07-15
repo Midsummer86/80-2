@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://v4.bootcss.com/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/getting-started/accessibility/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/alerts/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/extend/approach/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/getting-started/best-practices/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/about/brand/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/breadcrumb/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/browser-bugs/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/getting-started/browsers-devices/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/getting-started/build-tools/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/button-dropdown/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/button-group/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/buttons/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/card/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/carousel/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/content/code/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/collapse/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/getting-started/contents/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/getting-started/download/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/dropdowns/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/content/figures/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/getting-started/flexbox/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/forms/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/layout/grid/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/about/history/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/extend/icon-fonts/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/content/images/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/extend/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/examples/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/input-group/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/getting-started/introduction/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/getting-started/javascript/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/jumbotron/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/label/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/about/license/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/list-group/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/layout/media-object/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/migration/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/modal/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/navbar/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/navs/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/getting-started/options/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/layout/overview/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/pagination/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/popovers/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/progress/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/content/reboot/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/layout/responsive-utilities/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/scrollspy/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/content/tables/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/about/team/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/tooltips/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/about/translations/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/content/typography/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/utilities/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/components/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/about/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/getting-started/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/layout/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://v4.bootcss.com/content/</loc>
+    <lastmod>2015-08-24T22:25:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+</urlset>

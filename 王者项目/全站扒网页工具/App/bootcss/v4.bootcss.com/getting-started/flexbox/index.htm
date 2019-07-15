@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap - 简洁、直观、强悍、移动设备优先的前端开发框架，让web开发更迅速、简单。">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="author" content="王赛 翻译整理">
+
+<title>
+  
+    Flexbox &middot; Bootstrap
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../../dist/css/bootstrap.min.css" tppabs="http://v4.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="../../assets/css/docs.min.css" tppabs="http://v4.bootcss.com/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Google Web fonts -->
+<link href="../../../fonts.useso.com/css-family=Roboto-300,400,400italic,500.css" tppabs="http://fonts.useso.com/css?family=Roboto:300,400,400italic,500" rel="stylesheet">
+<link href="../../../fonts.useso.com/css-family=Source+Sans+Pro-400,300,400italic,600.css" tppabs="http://fonts.useso.com/css?family=Source+Sans+Pro:400,300,400italic,600" rel='stylesheet' type='text/css'>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js" tppabs="http://v4.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="../../assets/js/ie-emulation-modes-warning.js" tppabs="http://v4.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+<link rel="icon" href="/favicon.ico">
+
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../../hm.baidu.com/hm.js-fc4ecdb3b7e797fdd7347e29dbec6802.js"/*tpa=http://hm.baidu.com/hm.js?fc4ecdb3b7e797fdd7347e29dbec6802*/;
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  </head>
+  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <header class="navbar navbar-light navbar-static-top bd-navbar" role="banner">
+  
+
+  <div class="clearfix">
+    <button class="navbar-toggler pull-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
+      &#9776;
+    </button>
+    <a class="navbar-brand hidden-sm-up" href="../../index.htm" tppabs="http://v4.bootcss.com/">
+      Bootstrap
+    </a>
+  </div>
+  <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+    <nav class="nav navbar-nav">
+      <a class="nav-item nav-link " href="../../index.htm" tppabs="http://v4.bootcss.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Bootstrap</a>
+      <a class="nav-item nav-link active" href="../introduction/index.htm" tppabs="http://v4.bootcss.com/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">文档</a>
+      <a class="nav-item nav-link " href="../../examples/index.htm" tppabs="http://v4.bootcss.com/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">实例</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://themes.getbootstrap.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://themes.getbootstrap.com/%27" tppabs="http://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">主题</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://expo.bootcss.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://expo.bootcss.com/%27" tppabs="http://expo.bootcss.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">优站精选</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://blog.getbootstrap.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://blog.getbootstrap.com/%27" tppabs="http://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">博客</a>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="bd-pageheader">
+      <div class="container">
+        
+  <h1>Getting started</h1>
+  <p class="lead">
+    An overview of Bootstrap, including how to download and use it, some basic templates and examples, and more.
+  </p>
+
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-md-push-9 bd-sidebar">
+          <div class="bd-sidebar">
+
+  <form class="bd-search hidden-sm-down">
+    <input type="text" class="form-control" id="search-input" placeholder="Search...">
+    <div class="dropdown-menu bd-search-results" id="search-results"></div>
+  </form>
+
+  <nav class="bd-links" id="docsNavbarContent">
+    
+      
+      
+      
+
+      
+        
+      
+
+      <div class="bd-toc-item active">
+        
+          <a class="bd-toc-link" href="../introduction/index.htm" tppabs="http://v4.bootcss.com/getting-started/introduction">
+        
+          Getting started
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../introduction/index.htm" tppabs="http://v4.bootcss.com/getting-started/introduction">
+                Introduction
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../download/index.htm" tppabs="http://v4.bootcss.com/getting-started/download">
+                Download
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../browsers-devices/index.htm" tppabs="http://v4.bootcss.com/getting-started/browsers-devices">
+                Browsers & devices
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../options/index.htm" tppabs="http://v4.bootcss.com/getting-started/options">
+                Options
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+              
+            
+
+            <li class="active bd-sidenav-active">
+              <a href="index.htm" tppabs="http://v4.bootcss.com/getting-started/flexbox">
+                Flexbox
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../build-tools/index.htm" tppabs="http://v4.bootcss.com/getting-started/build-tools">
+                Build tools
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../best-practices/index.htm" tppabs="http://v4.bootcss.com/getting-started/best-practices">
+                Best practices
+              </a>
+
+              
+            </li>
+          
+        </ul>
+      </div>
+    
+      
+      
+      
+
+      
+
+      <div class="bd-toc-item ">
+        
+          <a class="bd-toc-link" href="../../layout/overview/index.htm" tppabs="http://v4.bootcss.com/layout/overview">
+        
+          Layout
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../layout/overview/index.htm" tppabs="http://v4.bootcss.com/layout/overview">
+                Overview
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../layout/grid/index.htm" tppabs="http://v4.bootcss.com/layout/grid">
+                Grid
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../layout/media-object/index.htm" tppabs="http://v4.bootcss.com/layout/media-object">
+                Media object
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../layout/responsive-utilities/index.htm" tppabs="http://v4.bootcss.com/layout/responsive-utilities">
+                Responsive utilities
+              </a>
+
+              
+            </li>
+          
+        </ul>
+      </div>
+    
+      
+      
+      
+
+      
+
+      <div class="bd-toc-item ">
+        
+          <a class="bd-toc-link" href="../../content/reboot/index.htm" tppabs="http://v4.bootcss.com/content/reboot">
+        
+          Content
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../content/reboot/index.htm" tppabs="http://v4.bootcss.com/content/reboot">
+                Reboot
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../content/typography/index.htm" tppabs="http://v4.bootcss.com/content/typography">
+                Typography
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../content/code/index.htm" tppabs="http://v4.bootcss.com/content/code">
+                Code
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../content/images/index.htm" tppabs="http://v4.bootcss.com/content/images">
+                Images
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../content/tables/index.htm" tppabs="http://v4.bootcss.com/content/tables">
+                Tables
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../content/figures/index.htm" tppabs="http://v4.bootcss.com/content/figures">
+                Figures
+              </a>
+
+              
+            </li>
+          
+        </ul>
+      </div>
+    
+      
+      
+      
+
+      
+
+      <div class="bd-toc-item ">
+        
+          <a class="bd-toc-link" href="../../components/buttons/index.htm" tppabs="http://v4.bootcss.com/components/buttons">
+        
+          Components
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/buttons/index.htm" tppabs="http://v4.bootcss.com/components/buttons">
+                Buttons
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/button-group/index.htm" tppabs="http://v4.bootcss.com/components/button-group">
+                Button group
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/button-dropdown/index.htm" tppabs="http://v4.bootcss.com/components/button-dropdown">
+                Button dropdown
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/forms/index.htm" tppabs="http://v4.bootcss.com/components/forms">
+                Forms
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/input-group/index.htm" tppabs="http://v4.bootcss.com/components/input-group">
+                Input group
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/dropdowns/index.htm" tppabs="http://v4.bootcss.com/components/dropdowns">
+                Dropdowns
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/jumbotron/index.htm" tppabs="http://v4.bootcss.com/components/jumbotron">
+                Jumbotron
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/label/index.htm" tppabs="http://v4.bootcss.com/components/label">
+                Label
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/alerts/index.htm" tppabs="http://v4.bootcss.com/components/alerts">
+                Alerts
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/card/index.htm" tppabs="http://v4.bootcss.com/components/card">
+                Card
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/navs/index.htm" tppabs="http://v4.bootcss.com/components/navs">
+                Navs
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/navbar/index.htm" tppabs="http://v4.bootcss.com/components/navbar">
+                Navbar
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/breadcrumb/index.htm" tppabs="http://v4.bootcss.com/components/breadcrumb">
+                Breadcrumb
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/pagination/index.htm" tppabs="http://v4.bootcss.com/components/pagination">
+                Pagination
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/progress/index.htm" tppabs="http://v4.bootcss.com/components/progress">
+                Progress
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/list-group/index.htm" tppabs="http://v4.bootcss.com/components/list-group">
+                List group
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/modal/index.htm" tppabs="http://v4.bootcss.com/components/modal">
+                Modal
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/scrollspy/index.htm" tppabs="http://v4.bootcss.com/components/scrollspy">
+                Scrollspy
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/tooltips/index.htm" tppabs="http://v4.bootcss.com/components/tooltips">
+                Tooltips
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/popovers/index.htm" tppabs="http://v4.bootcss.com/components/popovers">
+                Popovers
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/collapse/index.htm" tppabs="http://v4.bootcss.com/components/collapse">
+                Collapse
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/carousel/index.htm" tppabs="http://v4.bootcss.com/components/carousel">
+                Carousel
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../components/utilities/index.htm" tppabs="http://v4.bootcss.com/components/utilities">
+                Utilities
+              </a>
+
+              
+            </li>
+          
+        </ul>
+      </div>
+    
+      
+      
+      
+
+      
+
+      <div class="bd-toc-item ">
+        
+          <a class="bd-toc-link" href="../../about/history/index.htm" tppabs="http://v4.bootcss.com/about/history">
+        
+          About
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../about/history/index.htm" tppabs="http://v4.bootcss.com/about/history">
+                History
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../about/team/index.htm" tppabs="http://v4.bootcss.com/about/team">
+                Team
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../about/brand/index.htm" tppabs="http://v4.bootcss.com/about/brand">
+                Brand
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../about/license/index.htm" tppabs="http://v4.bootcss.com/about/license">
+                License
+              </a>
+
+              
+            </li>
+          
+            
+            
+
+            
+
+            <li class="">
+              <a href="../../about/translations/index.htm" tppabs="http://v4.bootcss.com/about/translations">
+                Translations
+              </a>
+
+              
+            </li>
+          
+        </ul>
+      </div>
+    
+      
+      
+      
+
+      
+
+      <div class="bd-toc-item ">
+        
+          <a class="bd-toc-link" href="../../migration/index.htm" tppabs="http://v4.bootcss.com/migration/">
+        
+          Migration
+        </a>
+
+        <ul class="nav bd-sidenav">
+          
+        </ul>
+      </div>
+    
+  </nav>
+</div>
+
+        </div>
+        <div class="col-md-9 col-md-pull-3 bd-content">
+          <h1 class="bd-title">Flexbox</h1>
+          <p>Flexbox support has finally come to Bootstrap. Opt-in to the new CSS layout styles with the flick of a variable or the swap of a stylesheet.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#whats-included" id="markdown-toc-whats-included">What’s included</a></li>
+  <li><a href="#why-flexbox" id="markdown-toc-why-flexbox">Why flexbox?</a></li>
+  <li><a href="#how-it-works" id="markdown-toc-how-it-works">How it works</a></li>
+  <li><a href="#browser-support" id="markdown-toc-browser-support">Browser support</a></li>
+</ul>
+
+<h2 id="whats-included">What’s included</h2>
+
+<p>Flexbox support is available for a number of Bootstrap’s components:</p>
+
+<ul>
+  <li>The entire grid system (mixins and predefined classes), which switch from <code>float</code>s to <code>display: flex;</code>.</li>
+  <li>Input groups, which move from <code>display: table;</code> to <code>display: flex;</code>.</li>
+  <li>The media component moves from <code>display: table;</code> and a number of hacky styles to a simple <code>display: flex;</code>.</li>
+</ul>
+
+<p>Vendor prefixes are provided in our compiled CSS with Autoprefixer via Grunt.</p>
+
+<h2 id="why-flexbox">Why flexbox?</h2>
+
+<p>In a nutshell, flexbox provides simpler and more flexible layout options in CSS. More specifically, it provides:</p>
+
+<ul>
+  <li>Easy vertical alignment of content within a parent element.</li>
+  <li>Easy reordering of content across devices and screen resolutions with the help of media queries.</li>
+  <li>Easy CSS-only equal height columns for your grid-based layouts.</li>
+</ul>
+
+<p>All these things are possible outside flexbox, but typically require extra hacks and workarounds to do right.</p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>If you’re familiar with modifying variables in Sass—or any other CSS preprocessor—you’ll be right at home to move into flexbox mode.</p>
+
+<ol>
+  <li>Open the <code>_variables.scss</code> file and find the <code>$enable-flex</code> variable.</li>
+  <li>Change it from <code>false</code> to <code>true</code>.</li>
+  <li>Recompile, and done!</li>
+</ol>
+
+<p>Alternatively, if you don’t need the source Sass files, you may swap the default Bootstrap compiled CSS with the compiled flexbox variation. <a href="../download/index.htm" tppabs="http://v4.bootcss.com/getting-started/download">Head to the download page</a> for more information.</p>
+
+<h2 id="browser-support">Browser support</h2>
+
+<p>Enabling flexbox means <strong>reduced browser and device support:</strong></p>
+
+<ul>
+  <li>Internet Explorer 9 and below do not support flexbox.</li>
+  <li>Internet Explorer 10 has a few known quirks (see the “Known issues” tab in <a href="javascript:if(confirm(%27http://caniuse.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://caniuse.com/#feat=flexbox%27" tppabs="http://caniuse.com/#feat=flexbox">Can I use…</a>), requires using a prefix, and only supports the syntax from the old 2012 version of the spec.</li>
+</ul>
+
+<p>Please be extra conscious of your user base when enabling flexbox in your project. Visit <a href="javascript:if(confirm(%27http://caniuse.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://caniuse.com/#feat=flexbox%27" tppabs="http://caniuse.com/#feat=flexbox">Can I use…</a> for details on browser support of flexbox.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="bd-footer text-muted" role="contentinfo">
+  <div class="container">
+    <ul class="bd-footer-links">
+      <li><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap%27" tppabs="https://github.com/twbs/bootstrap">GitHub</a></li>
+      <li><a href="javascript:if(confirm(%27https://twitter.com/getbootstrap  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/getbootstrap%27" tppabs="https://twitter.com/getbootstrap">Twitter</a></li>
+      <li><a href="javascript:if(confirm(%27http://v4.bootcss.com/getting-started/getting-started/  \n\nThis file was not retrieved by Teleport Ultra, because the server reports that this file cannot be found.  \n\nDo you want to open it from the server?%27))window.location=%27http://v4.bootcss.com/getting-started/getting-started/#examples%27" tppabs="http://v4.bootcss.com/getting-started/getting-started/#examples">Examples</a></li>
+      <li><a href="javascript:if(confirm(%27http://v4.bootcss.com/getting-started/about/  \n\nThis file was not retrieved by Teleport Ultra, because the server reports that this file cannot be found.  \n\nDo you want to open it from the server?%27))window.location=%27http://v4.bootcss.com/getting-started/about/%27" tppabs="http://v4.bootcss.com/getting-started/about/">About</a></li>
+    </ul>
+    <p>Designed and built with all the love in the world by <a href="javascript:if(confirm(%27https://twitter.com/mdo  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/mdo%27" tppabs="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="javascript:if(confirm(%27https://twitter.com/fat  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/fat%27" tppabs="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="javascript:if(confirm(%27https://github.com/orgs/twbs/people  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/orgs/twbs/people%27" tppabs="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/graphs/contributors  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/graphs/contributors%27" tppabs="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+    <p>Currently v4.0.0-alpha. Code licensed <a rel="license" href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/blob/master/LICENSE  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/blob/master/LICENSE%27" tppabs="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="javascript:if(confirm(%27https://creativecommons.org/licenses/by/3.0/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://creativecommons.org/licenses/by/3.0/%27" tppabs="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+  </div>
+</footer>
+
+<script src="../../../cdn.bootcss.com/jquery/1.11.3/jquery.min.js" tppabs="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+
+  <script src="../../dist/js/bootstrap.js" tppabs="http://v4.bootcss.com/dist/js/bootstrap.js"></script>
+
+
+
+  
+    <script src="../../assets/js/vendor/holder.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/holder.min.js"></script>
+  
+    <script src="../../assets/js/vendor/jekyll-search.js" tppabs="http://v4.bootcss.com/assets/js/vendor/jekyll-search.js"></script>
+  
+    <script src="../../assets/js/vendor/ZeroClipboard.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/ZeroClipboard.min.js"></script>
+  
+    <script src="../../assets/js/vendor/anchor.js" tppabs="http://v4.bootcss.com/assets/js/vendor/anchor.js"></script>
+  
+    <script src="../../assets/js/vendor/tether.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/tether.min.js"></script>
+  
+    <script src="../../assets/js/src/application.js" tppabs="http://v4.bootcss.com/assets/js/src/application.js"></script>
+  
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js" tppabs="http://v4.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+SimpleJekyllSearch.init({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('search-results'),
+  searchResultTemplate: '<a class="dropdown-item" href="{url}">{title}</a>',
+  noResultsText: '<div class="dropdown-item no-results">Sorry, there are no results for that search.</div>',
+  dataSource: '../../search.json.js'/*tpa=http://v4.bootcss.com/search.json*/
+})
+
+Holder.addTheme('gray', {
+  background: '#777',
+  foreground: 'rgba(255,255,255,.75)',
+  font: 'Helvetica',
+  fontweight: 'normal'
+})
+</script>
+
+  </body>
+</html>

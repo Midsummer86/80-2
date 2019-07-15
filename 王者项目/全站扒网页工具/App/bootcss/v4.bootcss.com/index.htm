@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap - 简洁、直观、强悍、移动设备优先的前端开发框架，让web开发更迅速、简单。">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="author" content="王赛 翻译整理">
+
+<title>
+  
+    Bootstrap &middot; 支持移动设备优先和响应式布局的最流行的前端开发框架。 | Bootstrap 4.0 中文文档
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="dist/css/bootstrap.min.css" tppabs="http://v4.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="assets/css/docs.min.css" tppabs="http://v4.bootcss.com/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Google Web fonts -->
+<link href="../fonts.useso.com/css-family=Roboto-300,400,400italic,500.css" tppabs="http://fonts.useso.com/css?family=Roboto:300,400,400italic,500" rel="stylesheet">
+<link href="../fonts.useso.com/css-family=Source+Sans+Pro-400,300,400italic,600.css" tppabs="http://fonts.useso.com/css?family=Source+Sans+Pro:400,300,400italic,600" rel='stylesheet' type='text/css'>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/js/ie10-viewport-bug-workaround.js" tppabs="http://v4.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="assets/js/ie-emulation-modes-warning.js" tppabs="http://v4.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+<link rel="icon" href="/favicon.ico">
+
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../hm.baidu.com/hm.js-fc4ecdb3b7e797fdd7347e29dbec6802.js"/*tpa=http://hm.baidu.com/hm.js?fc4ecdb3b7e797fdd7347e29dbec6802*/;
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  </head>
+  <body class="bd-home">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <header class="navbar navbar-light navbar-static-top bd-navbar" role="banner">
+  
+
+  <div class="clearfix">
+    <button class="navbar-toggler pull-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
+      &#9776;
+    </button>
+    <a class="navbar-brand hidden-sm-up" href="index.htm" tppabs="http://v4.bootcss.com/">
+      Bootstrap
+    </a>
+  </div>
+  <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+    <nav class="nav navbar-nav">
+      <a class="nav-item nav-link active" href="index.htm" tppabs="http://v4.bootcss.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Bootstrap</a>
+      <a class="nav-item nav-link " href="getting-started/introduction/index.htm" tppabs="http://v4.bootcss.com/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">文档</a>
+      <a class="nav-item nav-link " href="examples/index.htm" tppabs="http://v4.bootcss.com/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">实例</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://themes.getbootstrap.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://themes.getbootstrap.com/%27" tppabs="http://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">主题</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://expo.bootcss.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://expo.bootcss.com/%27" tppabs="http://expo.bootcss.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">优站精选</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://blog.getbootstrap.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://blog.getbootstrap.com/%27" tppabs="http://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">博客</a>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="bd-masthead" id="content" role="main">
+  <div class="container">
+    <span class="bd-booticon outline">B</span>
+    <p class="lead">Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。</p>
+    <p class="lead">
+      <a href="getting-started/download/index.htm" tppabs="http://v4.bootcss.com/getting-started/download" class="btn btn-outline-inverse btn-lg" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 4.0.0-alpha');">下载 Bootstrap</a>
+    </p>
+    <p class="version">当前版本：v4.0.0-alpha</p>
+  </div>
+</main>
+
+<div class="bd-featurette">
+  <div class="container">
+    <h2 class="bd-featurette-title">易学易会</h2>
+    <p class="lead">将 Bootstrap 的 CSS 和 JS 引入项目中即可使用。同时支持多种方式获取 Bootstrap，你可以使用你所喜欢的包管理器、或者下载源码、或者使用Bootstrap CDN。</p>
+
+    <div class="row">
+      <div class="col-sm-6 m-b-lg">
+        <h4>包管理器</h4>
+        <p>通过 Bower、Composer、Meteor 或者 npm 可以下载 Bootstrap 的 Sass 和 JavaScript 源码。以安装包的形式提供的文件不包含文档，Gruntfile 和 readme 文件包含的。</p>
+        <p>
+          <a class="btn btn-bs btn-outline" href="getting-started/download/index.htm#package-managers" tppabs="http://v4.bootcss.com/getting-started/download/#package-managers">查看各种安装方式</a>
+        </p>
+      </div>
+      <div class="col-sm-6 m-b-lg">
+        <h4>Bootstrap CDN</h4>
+        <p>如果你只是需要使用 Bootstrap 的 CSS 和 JS 文件，那么使用由 Max CDN 赞助的 Bootstrap CDN 是最快的方式。</p>
+
+        <p class="text-muted">暂时不可用，请稍后再过来看看吧！</p>
+      </div>
+    </div>
+
+    <hr class="half-rule m-t-0">
+
+    <p><strong>需要更简单的方式吗？</strong> 我们还提供了 定制话 Bootstrap 的 CSS 和 JS 文件。</p>
+    <a href="getting-started/download/index.htm#custom-builds" tppabs="http://v4.bootcss.com/getting-started/download/#custom-builds" class="btn btn-bs btn-outline">更多下载选择</a>
+  </div>
+</div>
+
+<div class="bd-featurette">
+  <div class="container">
+    <h2 class="bd-featurette-title">为所有开发者、所有应用场景而设计</h2>
+    <p class="lead">Bootstrap 让前端开发更快速、简单。所有开发者都能快速上手、所有设备都可以适配、所有项目都适用。</p>
+
+    <div class="row">
+      <div class="col-sm-4 m-b-lg">
+        <img src="assets/img/sass.png" tppabs="http://v4.bootcss.com/assets/img/sass.png" alt="Sass support" class="img-responsive">
+        <h4>预处理器</h4>
+        <p>Bootstrap 提供了可以直接使用的 CSS 文件，不过，Bootstrap 的源码是用 <a href="javascript:if(confirm(%27http://v4.bootcss.com/css/  \n\nThis file was not retrieved by Teleport Ultra, because the server reports that this file cannot be found.  \n\nDo you want to open it from the server?%27))window.location=%27http://v4.bootcss.com/css/#sass%27" tppabs="http://v4.bootcss.com/css/#sass">Sass</a> 开发的，Sass 是一个流行的 CSS 预处理器。如需快速上手可以直接使用编译好的 CSS 文件，或者你也可以自己编译源码。</p>
+      </div>
+      <div class="col-sm-4 m-b-lg">
+        <img src="assets/img/devices.png" tppabs="http://v4.bootcss.com/assets/img/devices.png" alt="Responsive across devices" class="img-responsive">
+        <h4>一个框架、多种设备</h4>
+        <p>你的网站和应用能在 Bootstrap 的帮助下通过同一份代码快速、有效适配手机、平板、PC 设备，这一切都是 CSS 媒体查询（Media Query）的功劳。</p>
+      </div>
+      <div class="col-sm-4 m-b-lg">
+        <img src="assets/img/components.png" tppabs="http://v4.bootcss.com/assets/img/components.png" alt="Components" class="img-responsive">
+        <h4>功能完备</h4>
+        <p>Bootstrap 提供了全面、美观的文档。你能在这里找到关于 HTML 元素、HTML 和 CSS 组件、jQuery 插件方面的所有详细文档。</p>
+      </div>
+    </div>
+
+    <hr class="half-rule m-t-0">
+
+    <p><strong>Bootstrap 是完全开源的！</strong> 它的代码托管、开发、维护都依赖 GitHub 平台。</p>
+    <a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap%27" tppabs="https://github.com/twbs/bootstrap" class="btn btn-bs btn-outline">进入 GitHub 仓库</a>
+  </div>
+</div>
+
+<div class="bd-featurette">
+  <div class="container">
+    <h2 class="bd-featurette-title">Bootstrap 官方主题</h2>
+    <p class="lead">
+      Bootstrap 官方高级主题带你进入新的层级。每个主题自己就是一个工具包，包含了所有 Bootstrap 功能、全新的组件和插件、完整的文档、构建工具等。
+    </p>
+
+    <p class="lead">
+      <a href="javascript:if(confirm(%27http://themes.getbootstrap.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://themes.getbootstrap.com/%27" tppabs="http://themes.getbootstrap.com/" class="btn btn-bs btn-outline">浏览所有主题</a>
+    </p>
+
+    <img class="img-responsive center-block" src="assets/img/bs-themes.png" tppabs="http://v4.bootcss.com/assets/img/bs-themes.png" alt="Bootstrap Themes" width="1024" height="388">
+  </div>
+</div>
+
+<div class="bd-featurette">
+  <div class="container">
+    <h2 class="bd-featurette-title">基于 Bootstrap 构建的网站</h2>
+    <p class="lead">全球数以百万计的网站都是基于 Bootstrap 构建的。你可以先参观一下我们提供的 <a href="getting-started/index.htm#examples" tppabs="http://v4.bootcss.com/getting-started/#examples">实例代码</a> 或者看一看我们粉丝的网站吧。</p>
+
+    <div class="row bd-featured-sites">
+    
+      <div class="col-xs-6 col-sm-3">
+        <a href="javascript:if(confirm(%27http://expo.getbootstrap.com/2014/10/29/lyft/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://expo.getbootstrap.com/2014/10/29/lyft/%27" tppabs="http://expo.getbootstrap.com/2014/10/29/lyft/" target="_blank" title="Lyft">
+          <img src="assets/img/expo-lyft.jpg" tppabs="http://v4.bootcss.com/assets/img/expo-lyft.jpg" alt="Lyft" class="img-responsive">
+        </a>
+      </div>
+    
+      <div class="col-xs-6 col-sm-3">
+        <a href="javascript:if(confirm(%27http://expo.getbootstrap.com/2014/09/30/vogue/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://expo.getbootstrap.com/2014/09/30/vogue/%27" tppabs="http://expo.getbootstrap.com/2014/09/30/vogue/" target="_blank" title="Vogue">
+          <img src="assets/img/expo-vogue.jpg" tppabs="http://v4.bootcss.com/assets/img/expo-vogue.jpg" alt="Vogue" class="img-responsive">
+        </a>
+      </div>
+    
+      <div class="col-xs-6 col-sm-3">
+        <a href="javascript:if(confirm(%27http://expo.getbootstrap.com/2014/03/13/riot-design/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://expo.getbootstrap.com/2014/03/13/riot-design/%27" tppabs="http://expo.getbootstrap.com/2014/03/13/riot-design/" target="_blank" title="Riot Design">
+          <img src="assets/img/expo-riot.jpg" tppabs="http://v4.bootcss.com/assets/img/expo-riot.jpg" alt="Riot Design" class="img-responsive">
+        </a>
+      </div>
+    
+      <div class="col-xs-6 col-sm-3">
+        <a href="javascript:if(confirm(%27http://expo.getbootstrap.com/2014/02/12/newsweek/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://expo.getbootstrap.com/2014/02/12/newsweek/%27" tppabs="http://expo.getbootstrap.com/2014/02/12/newsweek/" target="_blank" title="Newsweek">
+          <img src="assets/img/expo-newsweek.jpg" tppabs="http://v4.bootcss.com/assets/img/expo-newsweek.jpg" alt="Newsweek" class="img-responsive">
+        </a>
+      </div>
+    
+    </div>
+
+    <hr class="half-rule">
+
+    <p>我们在“优站精选”里展示了许多精美的 Bootstrap 网站。</p>
+    <a href="javascript:if(confirm(%27http://expo.bootcss.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://expo.bootcss.com/%27" tppabs="http://expo.bootcss.com/" class="btn btn-bs btn-outline">逛一逛“优站精选”吧</a>
+  </div>
+</div>
+
+
+    <footer class="bd-footer text-muted" role="contentinfo">
+  <div class="container">
+    <ul class="bd-footer-links">
+      <li><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap%27" tppabs="https://github.com/twbs/bootstrap">GitHub</a></li>
+      <li><a href="javascript:if(confirm(%27https://twitter.com/getbootstrap  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/getbootstrap%27" tppabs="https://twitter.com/getbootstrap">Twitter</a></li>
+      <li><a href="getting-started/index.htm#examples" tppabs="http://v4.bootcss.com/getting-started/#examples">Examples</a></li>
+      <li><a href="about/index.htm" tppabs="http://v4.bootcss.com/about/">About</a></li>
+    </ul>
+    <p>Designed and built with all the love in the world by <a href="javascript:if(confirm(%27https://twitter.com/mdo  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/mdo%27" tppabs="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="javascript:if(confirm(%27https://twitter.com/fat  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/fat%27" tppabs="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="javascript:if(confirm(%27https://github.com/orgs/twbs/people  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/orgs/twbs/people%27" tppabs="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/graphs/contributors  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/graphs/contributors%27" tppabs="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+    <p>Currently v4.0.0-alpha. Code licensed <a rel="license" href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/blob/master/LICENSE  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/blob/master/LICENSE%27" tppabs="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="javascript:if(confirm(%27https://creativecommons.org/licenses/by/3.0/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://creativecommons.org/licenses/by/3.0/%27" tppabs="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+  </div>
+</footer>
+
+<script src="../cdn.bootcss.com/jquery/1.11.3/jquery.min.js" tppabs="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+
+  <script src="dist/js/bootstrap.js" tppabs="http://v4.bootcss.com/dist/js/bootstrap.js"></script>
+
+
+
+  
+    <script src="assets/js/vendor/holder.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/holder.min.js"></script>
+  
+    <script src="assets/js/vendor/jekyll-search.js" tppabs="http://v4.bootcss.com/assets/js/vendor/jekyll-search.js"></script>
+  
+    <script src="assets/js/vendor/ZeroClipboard.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/ZeroClipboard.min.js"></script>
+  
+    <script src="assets/js/vendor/anchor.js" tppabs="http://v4.bootcss.com/assets/js/vendor/anchor.js"></script>
+  
+    <script src="assets/js/vendor/tether.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/tether.min.js"></script>
+  
+    <script src="assets/js/src/application.js" tppabs="http://v4.bootcss.com/assets/js/src/application.js"></script>
+  
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/js/ie10-viewport-bug-workaround.js" tppabs="http://v4.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+SimpleJekyllSearch.init({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('search-results'),
+  searchResultTemplate: '<a class="dropdown-item" href="{url}">{title}</a>',
+  noResultsText: '<div class="dropdown-item no-results">Sorry, there are no results for that search.</div>',
+  dataSource: 'search.json.js'/*tpa=http://v4.bootcss.com/search.json*/
+})
+
+Holder.addTheme('gray', {
+  background: '#777',
+  foreground: 'rgba(255,255,255,.75)',
+  font: 'Helvetica',
+  fontweight: 'normal'
+})
+</script>
+
+  </body>
+</html>

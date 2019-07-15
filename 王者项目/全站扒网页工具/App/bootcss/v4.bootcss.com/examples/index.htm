@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap - 简洁、直观、强悍、移动设备优先的前端开发框架，让web开发更迅速、简单。">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="author" content="王赛 翻译整理">
+
+<title>
+  
+    Examples &middot; Bootstrap
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../dist/css/bootstrap.min.css" tppabs="http://v4.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="../assets/css/docs.min.css" tppabs="http://v4.bootcss.com/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Google Web fonts -->
+<link href="../../fonts.useso.com/css-family=Roboto-300,400,400italic,500.css" tppabs="http://fonts.useso.com/css?family=Roboto:300,400,400italic,500" rel="stylesheet">
+<link href="../../fonts.useso.com/css-family=Source+Sans+Pro-400,300,400italic,600.css" tppabs="http://fonts.useso.com/css?family=Source+Sans+Pro:400,300,400italic,600" rel='stylesheet' type='text/css'>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js" tppabs="http://v4.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="../assets/js/ie-emulation-modes-warning.js" tppabs="http://v4.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+<link rel="icon" href="/favicon.ico">
+
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../hm.baidu.com/hm.js-fc4ecdb3b7e797fdd7347e29dbec6802.js"/*tpa=http://hm.baidu.com/hm.js?fc4ecdb3b7e797fdd7347e29dbec6802*/;
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  </head>
+  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <header class="navbar navbar-light navbar-static-top bd-navbar" role="banner">
+  
+
+  <div class="clearfix">
+    <button class="navbar-toggler pull-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
+      &#9776;
+    </button>
+    <a class="navbar-brand hidden-sm-up" href="../index.htm" tppabs="http://v4.bootcss.com/">
+      Bootstrap
+    </a>
+  </div>
+  <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+    <nav class="nav navbar-nav">
+      <a class="nav-item nav-link " href="../index.htm" tppabs="http://v4.bootcss.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Bootstrap</a>
+      <a class="nav-item nav-link " href="../getting-started/introduction/index.htm" tppabs="http://v4.bootcss.com/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">文档</a>
+      <a class="nav-item nav-link active" href="index.htm" tppabs="http://v4.bootcss.com/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">实例</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://themes.getbootstrap.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://themes.getbootstrap.com/%27" tppabs="http://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">主题</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://expo.bootcss.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://expo.bootcss.com/%27" tppabs="http://expo.bootcss.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">优站精选</a>
+      <a class="nav-item nav-link" href="javascript:if(confirm(%27http://blog.getbootstrap.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://blog.getbootstrap.com/%27" tppabs="http://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">博客</a>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="bd-pageheader text-xs-center text-sm-left">
+  <div class="container">
+    <h1>Examples</h1>
+    <p class="lead">
+      Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.
+    </p>
+  </div>
+</div>
+
+<div class="container bd-content">
+  <p><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.zip  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.zip%27" tppabs="https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.zip">Download the Bootstrap source code</a> to snag these examples.</p>
+
+<h2 id="framework">Framework</h2>
+
+<p>Examples that focus on implementing uses of built-in components provided by Bootstrap.</p>
+
+<div class="row bd-examples">
+  <div class="col-xs-6 col-md-4">
+    <a href="starter-template/index.htm" tppabs="http://v4.bootcss.com/examples/starter-template/">
+      <img class="img-thumbnail" src="screenshots/starter-template.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/starter-template.jpg" alt="" />
+    </a>
+    <h4>Starter template</h4>
+    <p>Nothing but the basics: compiled CSS and JavaScript.</p>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="grid/index.htm" tppabs="http://v4.bootcss.com/examples/grid/">
+      <img class="img-thumbnail" src="screenshots/grid.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/grid.jpg" alt="" />
+    </a>
+    <h4>Grids</h4>
+    <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
+  </div>
+  <div class="clearfix hidden-sm-up"></div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="jumbotron/index.htm" tppabs="http://v4.bootcss.com/examples/jumbotron/">
+      <img class="img-thumbnail" src="screenshots/jumbotron.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/jumbotron.jpg" alt="" />
+    </a>
+    <h4>Jumbotron</h4>
+    <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="javascript:if(confirm(%27http://v4.bootcss.com/examples/jumbotron-narrow/  \n\nThis file was not retrieved by Teleport Ultra, because the server reports that this file cannot be found.  \n\nDo you want to open it from the server?%27))window.location=%27http://v4.bootcss.com/examples/jumbotron-narrow/%27" tppabs="http://v4.bootcss.com/examples/jumbotron-narrow/">
+      <img class="img-thumbnail" src="screenshots/jumbotron-narrow.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/jumbotron-narrow.jpg" alt="" />
+    </a>
+    <h4>Narrow jumbotron</h4>
+    <p>Build a more custom page by narrowing the default container and jumbotron.</p>
+  </div>
+</div>
+
+<h2 id="navbars">Navbars</h2>
+
+<p>Taking the default navbar component and showing how it can be moved, placed, and extended.</p>
+
+<div class="row bd-examples">
+  <div class="col-xs-6 col-md-4">
+    <a href="navbar/index.htm" tppabs="http://v4.bootcss.com/examples/navbar/">
+      <img class="img-thumbnail" src="screenshots/navbar.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/navbar.jpg" alt="" />
+    </a>
+    <h4>Navbar</h4>
+    <p>Super basic template that includes the navbar along with some additional content.</p>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="navbar-top/index.htm" tppabs="http://v4.bootcss.com/examples/navbar-top/">
+      <img class="img-thumbnail" src="screenshots/navbar-static.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/navbar-static.jpg" alt="" />
+    </a>
+    <h4>Static top navbar</h4>
+    <p>Super basic template with a static top navbar along with some additional content.</p>
+  </div>
+  <div class="clearfix hidden-sm-up"></div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="navbar-top-fixed/index.htm" tppabs="http://v4.bootcss.com/examples/navbar-top-fixed/">
+      <img class="img-thumbnail" src="screenshots/navbar-fixed.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/navbar-fixed.jpg" alt="" />
+    </a>
+    <h4>Fixed navbar</h4>
+    <p>Super basic template with a fixed top navbar along with some additional content.</p>
+  </div>
+</div>
+
+<h2 id="custom-components">Custom components</h2>
+
+<p>Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework.</p>
+
+<div class="row bd-examples">
+  <div class="col-xs-6 col-md-4">
+    <a href="album/index.htm" tppabs="http://v4.bootcss.com/examples/album/">
+      <img class="img-thumbnail" src="screenshots/album.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/album.jpg" alt="" />
+    </a>
+    <h4>Album</h4>
+    <p>Simple one-page template for photo galleries, portfolios, and more.</p>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="cover/index.htm" tppabs="http://v4.bootcss.com/examples/cover/">
+      <img class="img-thumbnail" src="screenshots/cover.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/cover.jpg" alt="" />
+    </a>
+    <h4>Cover</h4>
+    <p>A one-page template for building simple and beautiful home pages.</p>
+  </div>
+  <div class="clearfix hidden-sm-up"></div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="carousel/index.htm" tppabs="http://v4.bootcss.com/examples/carousel/">
+      <img class="img-thumbnail" src="screenshots/carousel.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/carousel.jpg" alt="" />
+    </a>
+    <h4>Carousel</h4>
+    <p>Customize the navbar and carousel, then add some new components.</p>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="blog/index.htm" tppabs="http://v4.bootcss.com/examples/blog/">
+      <img class="img-thumbnail" src="screenshots/blog.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/blog.jpg" alt="" />
+    </a>
+    <h4>Blog</h4>
+    <p>Simple two-column blog layout with custom navigation, header, and type.</p>
+  </div>
+  <div class="clearfix hidden-sm-up"></div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="dashboard/index.htm" tppabs="http://v4.bootcss.com/examples/dashboard/">
+      <img class="img-thumbnail" src="screenshots/dashboard.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/dashboard.jpg" alt="" />
+    </a>
+    <h4>Dashboard</h4>
+    <p>Basic admin dashboard shell with fixed sidebar and navbar.</p>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="signin/index.htm" tppabs="http://v4.bootcss.com/examples/signin/">
+      <img class="img-thumbnail" src="screenshots/sign-in.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/sign-in.jpg" alt="" />
+    </a>
+    <h4>Sign-in page</h4>
+    <p>Custom form layout and design for a simple sign in form.</p>
+  </div>
+  <div class="clearfix hidden-sm-up"></div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="justified-nav/index.htm" tppabs="http://v4.bootcss.com/examples/justified-nav/">
+      <img class="img-thumbnail" src="screenshots/justified-nav.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/justified-nav.jpg" alt="" />
+    </a>
+    <h4>Justified nav</h4>
+    <p>Create a custom navbar with justified links. Heads up! <a href="javascript:if(confirm(%27http://v4.bootcss.com/examples/components/  \n\nThis file was not retrieved by Teleport Ultra, because the server reports that this file cannot be found.  \n\nDo you want to open it from the server?%27))window.location=%27http://v4.bootcss.com/examples/components/#nav-justified%27" tppabs="http://v4.bootcss.com/examples/components/#nav-justified">Not too Safari friendly.</a></p>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="sticky-footer/index.htm" tppabs="http://v4.bootcss.com/examples/sticky-footer/">
+      <img class="img-thumbnail" src="screenshots/sticky-footer.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/sticky-footer.jpg" alt="" />
+    </a>
+    <h4>Sticky footer</h4>
+    <p>Attach a footer to the bottom of the viewport when the content is shorter than it.</p>
+  </div>
+  <div class="clearfix hidden-sm-up"></div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="sticky-footer-navbar/index.htm" tppabs="http://v4.bootcss.com/examples/sticky-footer-navbar/">
+      <img class="img-thumbnail" src="screenshots/sticky-footer-navbar.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/sticky-footer-navbar.jpg" alt="" />
+    </a>
+    <h4>Sticky footer w/ navbar</h4>
+    <p>Attach a footer to the bottom of the viewport with a fixed top navbar.</p>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments</h2>
+
+<p>Examples that focus on future-friendly features or techniques.</p>
+
+<div class="row bd-examples">
+  <div class="col-xs-6 col-md-4">
+    <a href="offcanvas/index.htm" tppabs="http://v4.bootcss.com/examples/offcanvas/">
+      <img class="img-thumbnail" src="screenshots/offcanvas.jpg" tppabs="http://v4.bootcss.com/examples/screenshots/offcanvas.jpg" alt="" />
+    </a>
+    <h4>Offcanvas</h4>
+    <p>Build a toggleable off-canvas navigation menu for use with Bootstrap.</p>
+  </div>
+</div>
+
+</div>
+
+
+    <footer class="bd-footer text-muted" role="contentinfo">
+  <div class="container">
+    <ul class="bd-footer-links">
+      <li><a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap%27" tppabs="https://github.com/twbs/bootstrap">GitHub</a></li>
+      <li><a href="javascript:if(confirm(%27https://twitter.com/getbootstrap  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/getbootstrap%27" tppabs="https://twitter.com/getbootstrap">Twitter</a></li>
+      <li><a href="../getting-started/index.htm#examples" tppabs="http://v4.bootcss.com/getting-started/#examples">Examples</a></li>
+      <li><a href="../about/index.htm" tppabs="http://v4.bootcss.com/about/">About</a></li>
+    </ul>
+    <p>Designed and built with all the love in the world by <a href="javascript:if(confirm(%27https://twitter.com/mdo  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/mdo%27" tppabs="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="javascript:if(confirm(%27https://twitter.com/fat  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/fat%27" tppabs="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="javascript:if(confirm(%27https://github.com/orgs/twbs/people  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/orgs/twbs/people%27" tppabs="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/graphs/contributors  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/graphs/contributors%27" tppabs="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+    <p>Currently v4.0.0-alpha. Code licensed <a rel="license" href="javascript:if(confirm(%27https://github.com/twbs/bootstrap/blob/master/LICENSE  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/twbs/bootstrap/blob/master/LICENSE%27" tppabs="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="javascript:if(confirm(%27https://creativecommons.org/licenses/by/3.0/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://creativecommons.org/licenses/by/3.0/%27" tppabs="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+  </div>
+</footer>
+
+<script src="../../cdn.bootcss.com/jquery/1.11.3/jquery.min.js" tppabs="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+
+  <script src="../dist/js/bootstrap.js" tppabs="http://v4.bootcss.com/dist/js/bootstrap.js"></script>
+
+
+
+  
+    <script src="../assets/js/vendor/holder.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/holder.min.js"></script>
+  
+    <script src="../assets/js/vendor/jekyll-search.js" tppabs="http://v4.bootcss.com/assets/js/vendor/jekyll-search.js"></script>
+  
+    <script src="../assets/js/vendor/ZeroClipboard.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/ZeroClipboard.min.js"></script>
+  
+    <script src="../assets/js/vendor/anchor.js" tppabs="http://v4.bootcss.com/assets/js/vendor/anchor.js"></script>
+  
+    <script src="../assets/js/vendor/tether.min.js" tppabs="http://v4.bootcss.com/assets/js/vendor/tether.min.js"></script>
+  
+    <script src="../assets/js/src/application.js" tppabs="http://v4.bootcss.com/assets/js/src/application.js"></script>
+  
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js" tppabs="http://v4.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+SimpleJekyllSearch.init({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('search-results'),
+  searchResultTemplate: '<a class="dropdown-item" href="{url}">{title}</a>',
+  noResultsText: '<div class="dropdown-item no-results">Sorry, there are no results for that search.</div>',
+  dataSource: '../search.json.js'/*tpa=http://v4.bootcss.com/search.json*/
+})
+
+Holder.addTheme('gray', {
+  background: '#777',
+  foreground: 'rgba(255,255,255,.75)',
+  font: 'Helvetica',
+  fontweight: 'normal'
+})
+</script>
+
+  </body>
+</html>
