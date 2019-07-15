@@ -1,0 +1,308 @@
+html {
+  background-color: #000;
+}
+body {
+  width: 100%;
+  background: url(../img/skinBg.png) no-repeat center;
+}
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #151515;
+  box-sizing: border-box;
+}
+header .hd-logo {
+  width: 200px;
+  height: 54px;
+  padding-top: 12px;
+  padding-left: 12px;
+  float: left;
+  margin-right: 66px;
+}
+header .hd-nav {
+  float: left;
+  height: 80px;
+}
+header .hd-nav a:nth-child(3) {
+  color: #c39b5e;
+  padding: 0 18px;
+  border-bottom: 2px solid #c39b5e;
+}
+header .hd-nav a {
+  display: inline-block;
+  height: 62px;
+  margin-top: 16px;
+  padding: 0 18px;
+  font-size: 16px;
+  text-align: center;
+}
+header .hd-nav a p {
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  color: #464441;
+}
+header .hd-right {
+  width: 182px;
+  margin-top: 15px;
+  float: left;
+}
+header .hd-right img {
+  border: 1px solid #c69e4a;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  float: left;
+  margin-right: 8px;
+}
+header .hd-right .hd-dl {
+  float: left;
+}
+header .hd-right .hd-dl a {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+header .hd-right .hd-dl p {
+  font-size: 12px;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+}
+.sub-hd {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.sub-hd .zuo {
+  width: 82px;
+  height: 39px;
+  padding: 0 60px 0 45px;
+  margin-top: 12px;
+  margin-right: 355px;
+  float: left;
+  border-right: 1px solid #505360;
+}
+.sub-hd .zuo .title1 {
+  font-size: 14px;
+  color: #c39b5e;
+}
+.sub-hd .zuo .title2 {
+  font-size: 18px;
+  color: #f2d2a2;
+}
+.sub-hd .right {
+  height: 70px;
+  line-height: 70px;
+  color: #a59e94;
+}
+.sub-hd .right a {
+  padding-right: 78px;
+}
+.sub-hd .right a:nth-child(1) {
+  color: #c39b5e;
+}
+.banner-Top {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  background: url(../img/11111.jpg) no-repeat center;
+  background-size: 100%;
+  box-shadow: inset 0px -40px 35px #000;
+}
+.banner-Top .banner-grade {
+  position: absolute;
+  width: 120px;
+  height: 38px;
+  top: 160px;
+  left: 75px;
+}
+.banner-Top .wrap {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.banner-Top .wrap .head-hp {
+  position: absolute;
+  top: 323px;
+  width: 100%;
+  height: 144px;
+  background: url(../img/jingling.png) no-repeat 0 0;
+}
+.banner-Top .wrap .head-hp img {
+  position: absolute;
+  left: 540px;
+  top: 12px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.banner-Top .wrap .head-name {
+  font-size: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #c39b5e;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.banner-Top .wrap .head-name span:nth-child(1) {
+  margin-right: 30px;
+}
+.sfq {
+  width: 1098px;
+  height: 360px;
+  margin: 110px auto 0;
+}
+.sfq ul {
+  overflow: hidden;
+  margin: 0 auto;
+}
+.sfq ul li:nth-child(1) {
+  width: 750px;
+  height: 360px;
+  float: left;
+}
+.sfq ul li:nth-child(1) .sfq-nr {
+  width: 112px;
+  font-size: 30px;
+  float: left;
+  background: #1a1b1d;
+}
+.sfq ul li:nth-child(1) .sfq-nr .nr-bk {
+  width: 92px;
+  height: 330px;
+  margin: 15px 10px;
+  border: solid 1px rgba(185, 140, 82, 0.1);
+  border-top: none;
+  border-bottom: none;
+  cursor: pointer;
+}
+.sfq ul li:nth-child(1) .sfq-nr .nr-bk .title1 {
+  width: 35px;
+  line-height: 30px;
+  color: #c39b5e;
+  margin: auto;
+  padding: 40px 0 10px 0;
+  border-bottom: 1px solid rgba(195, 155, 94, 0.5);
+}
+.sfq ul li:nth-child(1) .sfq-nr .nr-bk .title2 {
+  width: 34px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #c39b5e;
+  margin: auto;
+  padding: 24px 0;
+}
+.sfq ul li:nth-child(1) .img img {
+  width: 638px;
+  height: 360px;
+  float: left;
+}
+.sfq ul li {
+  width: 112px;
+  height: 360px;
+  border-right: 3px solid #000;
+  float: left;
+}
+.sfq ul li .sfq-nr {
+  width: 112px;
+  font-size: 30px;
+  float: left;
+  background: #1a1b1d;
+}
+.sfq ul li .sfq-nr .nr-bk {
+  width: 92px;
+  height: 330px;
+  margin: 15px 10px;
+  border: solid 1px rgba(185, 140, 82, 0.1);
+  border-top: none;
+  border-bottom: none;
+  cursor: pointer;
+}
+.sfq ul li .sfq-nr .nr-bk .title1 {
+  width: 35px;
+  line-height: 30px;
+  color: #c39b5e;
+  margin: auto;
+  padding: 40px 0 10px 0;
+  border-bottom: 1px solid rgba(195, 155, 94, 0.5);
+}
+.sfq ul li .sfq-nr .nr-bk .title2 {
+  width: 34px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #c39b5e;
+  margin: auto;
+  padding: 24px 0;
+}
+.sfq ul li .img img {
+  width: 638px;
+  height: 360px;
+  float: left;
+}
+.texiao {
+  width: 1200px;
+  height: 60px;
+  line-height: 60px;
+  color: #c39b5e;
+  margin: 125px auto 0;
+}
+.texiao h3 {
+  width: 308px;
+  height: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+.content {
+  width: 1200px;
+  height: 632px;
+  margin: 0 auto;
+}
+.content .tx-z {
+  width: 1200px;
+  height: 10px;
+  margin-top: 15px;
+  background: url(../img/jingling.png) no-repeat 0 -219px;
+}
+.content .txt {
+  width: 1200px;
+  height: 93px;
+  font-size: 16px;
+  margin-top: 40px;
+  line-height: 36px;
+  color: #8f897f;
+}
+.content .img {
+  width: 1200px;
+  background-color: #000;
+  height: 370px;
+  margin-top: 49px;
+}
+.content .img img {
+  display: block;
+  margin: 0 auto;
+}
+footer {
+  width: 100%;
+  height: 134px;
+  background-color: #141414;
+  margin-top: 270px;
+  color: #999;
+  text-align: center;
+  font-size: 12px;
+}
+footer .food {
+  padding-top: 40px;
+}
+footer .food span {
+  margin-left: 3px;
+}
+footer .food p {
+  line-height: 23px;
+}

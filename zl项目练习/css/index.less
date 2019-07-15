@@ -1,0 +1,350 @@
+
+html{
+    background-color: #000;
+}
+body{
+    // width: 1349px;
+    width: 100%;
+    background:url(../img/skinBg.png) no-repeat center;
+}
+// -------头部样式
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #151515;
+    box-sizing: border-box;
+    .hd-logo{
+        width: 200px;
+        height: 54px;
+        padding-top: 12px;
+        padding-left: 12px;
+        float: left;
+        margin-right:66px;
+    }
+    .hd-nav{
+        float: left;
+        // width: 100%;
+        height: 80px;
+        a:nth-child(3){
+            color: #c39b5e;
+            padding: 0 18px;
+            border-bottom:2px solid #c39b5e;
+            }
+        
+        a{
+            display: inline-block;
+            height: 62px;
+            margin-top: 16px;
+            padding: 0 18px;
+            font-size: 16px;
+            text-align: center;
+            
+            p{
+                display: block;
+                margin-top: 5px;
+                font-size: 10px;
+                color: #464441;
+            }
+        }
+    }
+    .hd-right{
+        width: 182px;
+        margin-top: 15px;
+        float: left;
+        img{
+            border:1px solid #c69e4a;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            float: left;
+            margin-right: 8px;
+        }
+        .hd-dl{
+            float: left;
+            a{
+                display: block;
+                color: #fff;
+                font-size: 16px;;
+                margin-bottom: 4px;
+            }
+            
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+// -------------头部定位
+.fixed {
+    position: fixed;
+    top:0;
+}
+.sub-hd{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0,0,0,.6);
+    // z-index: 999;
+    // position: absolute;
+    // top: 80px;
+   
+    .zuo{
+        width: 82px;
+        height: 39px;
+        padding: 0 60px 0 45px;
+        margin-top: 12px;
+        margin-right: 355px;
+        float: left;
+        // background-color:pink;
+        border-right: 1px solid #505360;
+        .title1{
+            font-size: 14px;
+            color: #c39b5e;
+        }
+        .title2{
+            font-size: 18px;
+            color: #f2d2a2;
+        }
+    }
+    .right {
+        height: 70px;
+        line-height: 70px;
+        color: #a59e94;
+        a{
+            padding-right: 78px;
+            &:nth-child(1){
+                color: #c39b5e;
+            }
+                
+        }
+    }
+}
+    
+// --------------------banner大图
+.banner-Top{
+    position: relative;
+    width: 100%;
+    height: 620px;
+    background: url(../img/11111.jpg) no-repeat center;
+    background-size:100%;
+    box-shadow:inset 0px -40px  35px #000;
+    .banner-grade{
+        position: absolute;
+        width: 120px;
+        height: 38px;
+        top: 160px;
+        left: 75px;
+    }
+    
+    .wrap{
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        .head-hp{
+            position: absolute;
+            top: 323px;
+            width: 100%;
+            height: 144px;
+            background: url(../img/jingling.png) no-repeat 0 0; 
+            img{
+                position: absolute;
+                left: 540px;
+                top: 12px;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+            }
+        }
+        .head-name {
+            font-size: 60px;
+            height: 60px;
+            line-height: 60px;
+            color: #c39b5e;
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            span:nth-child(1){
+                margin-right: 30px;
+            }
+        }
+    }   
+}   
+
+
+// -------------------手风琴
+
+.sfq{
+
+    width: 1098px;
+    height: 360px;
+    margin: 110px auto 0;
+    // background-color: pink;
+    ul{
+        overflow: hidden;
+        margin: 0 auto;
+        li:nth-child(1){
+            width: 750px;
+            height: 360px;
+            float: left;
+            .sfq-nr{
+                width: 112px;
+                font-size: 30px;
+                float: left;
+                background: #1a1b1d;
+                .nr-bk{
+                    width: 92px;
+                    height: 330px;
+                    margin: 15px 10px;
+                    border: solid 1px rgba(185, 140, 82, 0.1);
+                    border-top: none;
+                    border-bottom: none;
+                    cursor: pointer;
+                    .title1{
+                        width: 35px;
+                        line-height: 30px;
+                        color: #c39b5e;
+                        margin: auto;
+                        padding:40px 0 10px 0;
+                        border-bottom: 1px solid rgba(195, 155, 94, 0.5);
+                    }
+                    .title2{
+                        width: 34px;
+                        line-height: 36px;
+                        font-weight: 600;
+                        color: #c39b5e;
+                        margin: auto;
+                        padding: 24px 0;
+                        
+                    }
+                }
+            }
+            .img{
+                img{
+                    // display: block;
+                    width: 638px;
+                    height: 360px;
+                    float: left;
+                }
+            }
+        }
+        li{
+            width: 112px;
+            height: 360px;
+            border-right: 3px solid #000;
+            float: left;
+            .sfq-nr{
+                width: 112px;
+                font-size: 30px;
+                float: left;
+                background: #1a1b1d;
+                .nr-bk{
+                    width: 92px;
+                    height: 330px;
+                    margin: 15px 10px;
+                    border: solid 1px rgba(185, 140, 82, 0.1);
+                    border-top: none;
+                    border-bottom: none;
+                    cursor: pointer;
+                    .title1{
+                        width: 35px;
+                        line-height: 30px;
+                        color: #c39b5e;
+                        margin: auto;
+                        padding:40px 0 10px 0;
+                        border-bottom: 1px solid rgba(195, 155, 94, 0.5);
+                    }
+                    .title2{
+                        width: 34px;
+                        line-height: 36px;
+                        font-weight: 600;
+                        color: #c39b5e;
+                        margin: auto;
+                        padding: 24px 0;
+                        
+                    }
+                }
+            }
+            .img{
+                img{
+                    // display: none;
+                    width: 638px;
+                    height: 360px;
+                    float: left;
+                }
+            }
+        }
+    }
+ }        
+
+
+
+
+
+// ----------------特效介绍
+.texiao{ 
+    width: 1200px;
+    height: 60px;
+    line-height: 60px;
+    color: #c39b5e;
+    margin: 125px auto 0;
+    h3{
+        width: 308px;
+        height: 50px;
+        font-size: 40px;
+        font-weight: bold;
+        margin: 0 auto;
+    }
+}
+
+// ----------------content
+.content{
+    width: 1200px;
+    height: 632px;
+    margin: 0 auto;
+    .tx-z{
+        width: 1200px;
+        height: 10px;
+        margin-top: 15px;
+        background: url(../img/jingling.png) no-repeat 0 -219px;
+    }
+    .txt{
+        width: 1200px;
+        height: 93px;
+        font-size: 16px;
+        margin-top: 40px;
+        line-height: 36px;
+        color: #8f897f;
+    }
+    .img{
+        width: 1200px;
+        background-color: #000;
+        height: 370px;
+        margin-top: 49px;
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+footer{
+    width: 100%;
+    height: 134px;
+    background-color: #141414;
+    margin-top: 270px;
+    color: #999;
+    text-align: center;
+    font-size: 12px;
+    .food{
+        padding-top: 40px;
+        span{
+            margin-left: 3px;
+        }
+        p{
+            line-height: 23px;
+        }
+    }
+}

@@ -20,6 +20,7 @@ input {
 }
 /*常用的样式*/
 body {
+	width: 1349px;
 	background-color: #000;
 	font: 14px arial, 'microsoft yahei';
 	color: #8f897f;
@@ -27,14 +28,14 @@ body {
 a {
 	color: #666;
 }
-a:hover {
+/* a:hover {
 	color: #00b4ff;
-}
+} */
 /*版心*/
-.w {
+/* .w {
 	width: 1330px;
 	margin: 0 auto;
-}
+} */
 
 .fl {
 	float: left;
