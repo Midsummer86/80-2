@@ -1,10 +1,10 @@
 //头部鼠标进入显示下拉图片 鼠标离开消失
 $('.jinian').mouseenter(function(){
-    $('.song').css('diaplay','block');
+    $('.song').css('display','block');
 
 });
-$('.jinian').mouseleave(function(){
-    $('.song').css('diaplay','none');
+$('.song').mouseleave(function(){
+    $('.song').css('display','none');
 });
 //鼠标进入a标签颜色变黄 有下划线
 $('.nav a').mouseenter(function(){
@@ -16,16 +16,35 @@ $('.nav a').mouseenter(function(){
     $(this).css('border-bottom', '');
 });
 //鼠标进入导航栏
-$('.nav').mouseenter(function(){});
-$('.nav').mouseleave(function(){});
-//类似于手风琴切换
-$('.zm a').mouseenter(function(){
-    $(this).children('img').css('display','none');
-    $(this).find('span img').css('display','block');
+$('.daohang').mouseenter(function(){
+    $('.jieshao').css('display','block')
 });
-$('.zm a').mouseleave(function(){
- $(this).find('span img').css('display','none');
- $(this).siblings('a').children('img').css('display','block');
- $(this).siblings('a').find('span img').css('display','none');
+$('.nav').mouseleave(function(){
+    $('.jieshao').css('display','none')
+});
+//类似于手风琴切换 
+$('.zm a').mouseenter(function(){
+    $('.zm a>img').css('display','inline-block');
+    $(this).children('img').css('display','none');
+    $('.zm a span img').css('display','none');
+    $(this).find('span img').css('display','inline-block');
+});
+//tab栏 切换
+ 
+$('.all li input[type="radio"]').click(function () {
+    var i= $(this).parents('li').index()
+    console.log(i)
+    $('.list ul').eq(i).css('display','block').siblings('ul').css('display','none');
+ 
+})
+
+//搜索事件
+$('.all .aa input').bind(function(){
+    var ab = this.value;
+    var cd = $('.qb li p').text();
+    console.log(cd);
     
+    // if(ab==cd){
+    //     // $('')
+    // }
 });
