@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+#certify {
+	position: absolute;
+	top: 195px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 1200px;
+	margin: auto;
+}
+
+#certify .swiper-container {
+	padding-bottom: 92px;
+}
+#certify  .swiper-slide {
+	width: 480px;
+	height: 260px;
+	background: #fff;
+	/* box-shadow: 0 8px 30px #ddd; */
+}
+#certify  .swiper-slide img{
+	display:block;
+}
+#certify  .swiper-slide p {
+	line-height: 98px;
+	padding-top: 0;
+	text-align: center;
+	color: #636363;
+	font-size: 1.1em;
+	margin: 0;
+}
+
+#certify .swiper-pagination {
+	width: 100%;
+	bottom: 20px;
+}
+
+#certify .swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 5px;
+	border: 3px solid #fff;
+	background-color: #d5d5d5;
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+#certify .swiper-pagination-bullets .swiper-pagination-bullet-active {
+	border: 3px solid #00aadc;
+	background-color: #fff;
+}
+
+#certify .swiper-button-prev {
+	left: 150px;
+	top: 130px;
+	width: 79px;
+	height: 44px;
+	background: url(../images/spr.png) no-repeat;
+	background-position: -327px 0;
+	/* background-size: 100%; */
+}
+
+/* #certify .swiper-button-prev:hover {
+	background-position: 0 -46px;
+	background-size: 100%
+} */
+
+#certify .swiper-button-next {
+	right: 150px;
+	top: 130px;
+	width: 79px;
+	height: 44px;
+	background: url(../images/spr.png) no-repeat;
+	background-position: -249px 0;
+}
+
+/* #certify .swiper-button-next:hover {
+	background-position: 0 -139px;
+	background-size: 100%
+} */
